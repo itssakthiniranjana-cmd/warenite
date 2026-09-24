@@ -4429,118 +4429,336 @@ button, input, select, textarea {
   margin-left: auto;
 }
 
-/* AI Command & Intelligence Section UI */
+/* ==========================================================================
+   AI COMMAND & INTELLIGENCE FOR THE WAREHOUSE (MODERN COPILOT DESIGN)
+   ========================================================================== */
 .ai-section-wrapper {
-  background: linear-gradient(180deg, #071930 0%, #0A2140 100%);
+  background: radial-gradient(circle at 15% 20%, rgba(255, 94, 20, 0.14) 0%, transparent 45%),
+              radial-gradient(circle at 85% 80%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
+              #051426;
   color: #FFFFFF;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.ai-console-card {
-  background: #051426;
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(56, 189, 248, 0.08);
-  padding: 30px;
+.ai-section-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.ai-telemetry-badge-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
+
+.ai-telemetry-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-tech);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #E2E8F0;
+}
+
+.ai-copilot-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 32px;
+  align-items: start;
   position: relative;
+  z-index: 2;
 }
 
-.ai-header-bar {
+/* Copilot Command Window */
+.ai-copilot-window {
+  background: rgba(7, 24, 46, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(56, 189, 248, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-copilot-header {
+  background: #06172D;
+  padding: 16px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   flex-wrap: wrap;
   gap: 12px;
 }
 
-.ai-bot-ident {
+.ai-copilot-brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
-.ai-bot-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+.ai-copilot-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   background: linear-gradient(135deg, #FF5E14 0%, #FF8800 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(255, 94, 20, 0.4);
+  box-shadow: 0 0 15px rgba(255, 94, 20, 0.5);
+  flex-shrink: 0;
 }
 
-.ai-greeting-box {
-  background: rgba(255, 255, 255, 0.04);
+.ai-copilot-title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-copilot-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+}
+
+.ai-copilot-sub {
+  font-family: var(--font-tech);
+  font-size: 0.6875rem;
+  color: #38BDF8;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ai-status-live-chip {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34D399;
+  font-family: var(--font-tech);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-live-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: fePulse 1.4s infinite ease-in-out;
+}
+
+/* Copilot Chat & Insight Stream */
+.ai-copilot-stream {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.ai-dialog-card {
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 16px 20px;
-  margin-bottom: 22px;
+  padding: 16px 18px;
+}
+
+.ai-greeting-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
 }
 
 .ai-greeting-title {
   font-family: var(--font-heading);
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 4px;
 }
 
-.ai-insights-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 24px;
+.ai-greeting-time {
+  font-family: var(--font-code);
+  font-size: 0.6875rem;
+  color: #64748B;
 }
 
-.ai-insight-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 18px;
+/* Specific Insight Cards */
+.ai-insight-card {
   border-radius: 10px;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  transition: transform 0.2s;
+  padding: 14px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: all 0.2s ease;
 }
 
-.ai-insight-row:hover {
+.ai-insight-card:hover {
   transform: translateX(4px);
 }
 
-.ai-insight-row.warning {
+.ai-insight-card.danger {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #FECACA;
+}
+
+.ai-insight-card.warning {
   background: rgba(245, 158, 11, 0.1);
-  border: 1px solid rgba(245, 158, 11, 0.25);
+  border: 1px solid rgba(245, 158, 11, 0.3);
   color: #FDE68A;
 }
 
-.ai-insight-row.success {
+.ai-insight-card.success {
   background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   color: #A7F3D0;
 }
 
-.ai-insight-row.info {
+.ai-insight-card.info {
   background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   color: #BAE6FD;
 }
 
-.ai-query-simulator {
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  padding: 8px 12px;
+.ai-insight-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.ai-query-input {
+.ai-insight-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.ai-insight-text strong {
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.ai-insight-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-family: var(--font-tech);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ai-insight-action-btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Prompt Suggestion Chips */
+.ai-chips-container {
+  padding: 0 24px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-chips-label {
+  font-family: var(--font-tech);
+  font-size: 0.6875rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ai-chips-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ai-prompt-chip {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #E2E8F0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-prompt-chip:hover {
+  background: rgba(255, 94, 20, 0.2);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Interactive Command Input Terminal */
+.ai-copilot-input-bar {
+  background: #041021;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-terminal-prompt-prefix {
+  font-family: var(--font-code);
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  user-select: none;
+}
+
+.ai-copilot-input-field {
   background: transparent;
   border: none;
   outline: none;
@@ -4550,56 +4768,96 @@ button, input, select, textarea {
   flex-grow: 1;
 }
 
-.ai-query-btn {
-  background: var(--color-primary);
+.ai-copilot-input-field::placeholder {
+  color: #64748B;
+}
+
+.ai-copilot-submit-btn {
+  background: linear-gradient(135deg, #FF5E14 0%, #FF8800 100%);
   border: none;
   color: #FFFFFF;
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 8px;
   font-family: var(--font-tech);
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
-  transition: all 0.2s;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(255, 94, 20, 0.35);
+  transition: all 0.2s ease;
 }
 
-.ai-query-btn:hover {
-  background: var(--color-primary-hover);
+.ai-copilot-submit-btn:hover {
+  background: linear-gradient(135deg, #E64E07 0%, #FF7700 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 94, 20, 0.5);
 }
 
-.ai-pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 36px;
+/* Right Side AI Telemetry & Capability Cards */
+.ai-telemetry-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.ai-pillar-box {
-  background: rgba(255, 255, 255, 0.03);
+.ai-feature-card-modern {
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 24px;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.ai-pillar-box:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: var(--color-primary);
+.ai-feature-card-modern:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(56, 189, 248, 0.4);
   transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.ai-feature-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.ai-feature-icon-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-feature-icon-badge.orange {
+  background: rgba(255, 94, 20, 0.12);
+  border-color: rgba(255, 94, 20, 0.3);
+  color: var(--color-primary);
+}
+
+.ai-feature-icon-badge.green {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #10B981;
 }
 
 .ai-status-pill {
   display: inline-block;
   padding: 3px 10px;
-  border-radius: 99px;
+  border-radius: var(--radius-full);
   font-family: var(--font-tech);
   font-size: 0.6875rem;
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  letter-spacing: 0.05em;
 }
 
 .ai-status-pill.now {
@@ -4618,6 +4876,61 @@ button, input, select, textarea {
   background: rgba(56, 189, 248, 0.15);
   color: #38BDF8;
   border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.ai-feature-title {
+  font-family: var(--font-heading);
+  font-size: 1.1875rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.ai-feature-desc {
+  font-size: 0.875rem;
+  color: #94A3B8;
+  line-height: 1.6;
+}
+
+.ai-metric-strip-card {
+  background: linear-gradient(135deg, rgba(255, 94, 20, 0.12) 0%, rgba(10, 33, 64, 0.6) 100%);
+  border: 1px solid rgba(255, 94, 20, 0.3);
+  border-radius: 14px;
+  padding: 18px 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.ai-metric-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ai-metric-num {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.ai-metric-num.highlight {
+  color: #FF9466;
+}
+
+.ai-metric-lbl {
+  font-family: var(--font-tech);
+  font-size: 0.6875rem;
+  color: #CBD5E1;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .ai-copilot-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 6-Step Connected Flow (RECEIVE -> STORE -> MANAGE -> FULFILL -> SHIP -> ANALYZE) */

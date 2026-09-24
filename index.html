@@ -769,93 +769,194 @@
     </div>
   </section>
 
-  <!-- ================= 06. AI & INTELLIGENCE SECTION ================= -->
+  <!-- ================= 06. AI & INTELLIGENCE SECTION (WAREKNIT AI COPILOT) ================= -->
   <section class="section-padding ai-section-wrapper" id="ai">
     <div class="container">
       <div class="section-header reveal" style="text-align: center;">
-        <div class="sub-title-tag" style="background: rgba(255, 94, 20, 0.15); color: #FF9466; border-color: rgba(255, 94, 20, 0.3);">
+        <div class="sub-title-tag" style="background: rgba(255, 94, 20, 0.15); color: #FF9466; border-color: rgba(255, 94, 20, 0.35);">
           <span class="tag-slash">//</span> OPERATIONAL INTELLIGENCE
         </div>
-        <h2 class="section-title" style="color: #FFFFFF;">Intelligence for the Warehouse.</h2>
-        <p class="section-subtitle" style="color: #94A3B8;">
-          Turn Warehouse Data Into Decisions. Wareknit brings AI into the operational layer—helping teams understand inventory, identify exceptions, optimize workflows and make better decisions.
+        <h2 class="section-title" style="color: #FFFFFF; font-size: 2.5rem;">Intelligence for the Warehouse.</h2>
+        <p class="section-subtitle" style="color: #94A3B8; max-width: 720px; margin: 0 auto;">
+          Turn Warehouse Data Into Decisions. Wareknit embeds machine intelligence into the physical operating layer—triaging exceptions, forecasting inventory risks, and accelerating dispatch SLAs in real time.
         </p>
-      </div>
 
-      <!-- AI Interactive Console Mockup (As Specified in Brief Section 20 & 21) -->
-      <div class="ai-console-card reveal">
-        <div class="ai-header-bar">
-          <div class="ai-bot-ident">
-            <div class="ai-bot-avatar">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-            </div>
-            <div>
-              <div style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 800; color: #FFFFFF;">WAREKNIT AI ASSISTANT</div>
-              <div style="font-family: var(--font-tech); font-size: 0.75rem; color: #38BDF8;">Operational Decision Support &middot; Dallas Hub Node</div>
-            </div>
+        <!-- Quick Telemetry Strip -->
+        <div class="ai-telemetry-badge-strip">
+          <div class="ai-telemetry-pill">
+            <span style="color: var(--color-primary); font-size: 1rem;">⚡</span>
+            <span>12ms Query Response</span>
           </div>
-          <div class="ai-status-pill now">&check; Active Monitoring</div>
-        </div>
-
-        <div class="ai-greeting-box">
-          <div class="ai-greeting-title">Good morning. 12 orders require attention.</div>
-          <p style="font-size: 0.875rem; color: #94A3B8; margin: 0;">Operational intelligence telemetry refreshed 1 min ago for Dallas fulfillment waves.</p>
-        </div>
-
-        <!-- AI Insights Rows -->
-        <div class="ai-insights-container">
-          <div class="ai-insight-row warning">
-            <span style="font-size: 1.125rem;">&#9888;</span>
-            <div><strong>4 orders may miss today's dispatch window:</strong> Line items in wave #4 awaiting carrier pickup scan at Dock Door 3.</div>
+          <div class="ai-telemetry-pill">
+            <span style="color: #38BDF8; font-size: 1rem;">🎯</span>
+            <span>99.98% Exception Detection Precision</span>
           </div>
-
-          <div class="ai-insight-row warning">
-            <span style="font-size: 1.125rem;">&#9888;</span>
-            <div><strong>SKU-102 inventory projected below threshold:</strong> Current stock 48 units &middot; Estimated runout in 36 hours based on current order velocity.</div>
+          <div class="ai-telemetry-pill">
+            <span style="color: #34D399; font-size: 1rem;">🛡️</span>
+            <span>Proactive Carrier SLA Defense</span>
           </div>
-
-          <div class="ai-insight-row success">
-            <span style="font-size: 1.125rem;">&#10003;</span>
-            <div><strong>86% of today's outbound orders are on schedule:</strong> Wave 1 and Wave 2 packing completed 14 minutes ahead of carrier SLA.</div>
-          </div>
-        </div>
-
-        <!-- Interactive AI Query Simulator -->
-        <div class="ai-query-simulator">
-          <span style="color: var(--color-primary); font-family: var(--font-code); font-weight: 700; padding-left: 8px;">Ask Wareknit AI &gt;</span>
-          <input type="text" class="ai-query-input" id="aiQueryInput" value="Show me today's fulfillment exceptions." readonly>
-          <button class="ai-query-btn" id="aiQueryBtn" onclick="alert('Wareknit AI: 12 orders flagged for review. 4 pending carrier door assignment, 8 waiting for SKU-102 replen. Proactive re-route initiated.');">
-            <span>Query AI</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
         </div>
       </div>
 
-      <!-- 3 AI Pillars Grid -->
-      <div class="ai-pillars-grid">
-        <div class="ai-pillar-box reveal">
-          <span class="ai-status-pill now">Available Now</span>
-          <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px; color: #FFFFFF;">AI Operations Assistant</h4>
-          <p style="font-size: 0.875rem; color: #94A3B8; line-height: 1.6;">
-            Ask questions about warehouse activity in natural language. Instant insight into order bottlenecks, carrier pickups, and picker productivity.
-          </p>
+      <!-- Main Copilot Command Station (Two-Column Layout) -->
+      <div class="ai-copilot-layout">
+        
+        <!-- Left: Interactive AI Copilot Dialog Console -->
+        <div class="ai-copilot-window reveal">
+          <div class="ai-copilot-header">
+            <div class="ai-copilot-brand">
+              <div class="ai-copilot-avatar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              </div>
+              <div class="ai-copilot-title-box">
+                <span class="ai-copilot-name">WAREKNIT AI ASSISTANT</span>
+                <span class="ai-copilot-sub">Dallas Fulfillment Core // v3.4 Neural</span>
+              </div>
+            </div>
+            <div class="ai-status-live-chip">
+              <span class="ai-live-pulse-dot"></span>
+              <span>LIVE COPILOT</span>
+            </div>
+          </div>
+
+          <!-- Conversation & Alert Stream -->
+          <div class="ai-copilot-stream" id="aiCopilotStream">
+            <!-- Greeting Box -->
+            <div class="ai-dialog-card">
+              <div class="ai-greeting-head">
+                <span class="ai-greeting-title">Good morning. 12 orders require attention.</span>
+                <span class="ai-greeting-time">14:26 CST &middot; Synced</span>
+              </div>
+              <p style="font-size: 0.8125rem; color: #94A3B8; margin: 0; line-height: 1.5;">
+                Telemetry analyzed across 1,284 Dallas orders today. 3 active operational alerts surfaced below:
+              </p>
+            </div>
+
+            <!-- Insight Alert 1: Cutoff Risk -->
+            <div class="ai-insight-card warning">
+              <div class="ai-insight-icon-box" style="color: #F59E0B; background: rgba(245, 158, 11, 0.15);">&#9888;</div>
+              <div class="ai-insight-text">
+                <strong>4 orders may miss today's dispatch window</strong>
+                <div>Line items in wave #4 awaiting carrier pickup scan at Dock Door 3. Estimated SLA delay: 18 mins if unaddressed.</div>
+                <button class="ai-insight-action-btn" onclick="alert('Action Executed: Re-routed Wave #4 items to High-Velocity Packing Station #2.');">
+                  <span>⚡ Auto-Reroute to Station #2</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Insight Alert 2: Stockout Runout -->
+            <div class="ai-insight-card danger">
+              <div class="ai-insight-icon-box" style="color: #EF4444; background: rgba(239, 68, 68, 0.15);">&#9888;</div>
+              <div class="ai-insight-text">
+                <strong>SKU-102 inventory projected below threshold</strong>
+                <div>Current stock: 48 units &middot; Velocity: 16 units/day. Projected stockout in 36 hours. Supplier PO #4481 recommended for immediate staging.</div>
+                <button class="ai-insight-action-btn" onclick="alert('Action Executed: Supplier replenishment PO #4481 drafted in ERP.');">
+                  <span>📦 Draft Supplier PO</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Insight Alert 3: Success SLA Metric -->
+            <div class="ai-insight-card success">
+              <div class="ai-insight-icon-box" style="color: #10B981; background: rgba(16, 185, 129, 0.15);">&#10003;</div>
+              <div class="ai-insight-text">
+                <strong>86% of today's outbound orders are on schedule</strong>
+                <div>Waves 1 and 2 packing completed 14 minutes ahead of FedEx &amp; UPS carrier cutoffs with 100% barcode accuracy.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prompt Suggestion Chips -->
+          <div class="ai-chips-container">
+            <div class="ai-chips-label">Quick AI Queries (Click to Run):</div>
+            <div class="ai-chips-list">
+              <button class="ai-prompt-chip" data-prompt="Show me today's fulfillment exceptions.">
+                <span>⚠️ Show Exceptions (12)</span>
+              </button>
+              <button class="ai-prompt-chip" data-prompt="Analyze SKU-102 depletion rate and reorder date.">
+                <span>📦 SKU-102 Runout Risk</span>
+              </button>
+              <button class="ai-prompt-chip" data-prompt="Optimize Wave 4 packing station assignments.">
+                <span>⚡ Optimize Wave 4</span>
+              </button>
+              <button class="ai-prompt-chip" data-prompt="Calculate multi-carrier rate savings for today's volume.">
+                <span>🚚 Carrier Rate Shopping</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Terminal Input Bar -->
+          <form class="ai-copilot-input-bar" id="aiConsoleForm" onsubmit="event.preventDefault(); handleAiQuerySubmit();">
+            <span class="ai-terminal-prompt-prefix">Ask Wareknit AI &gt;</span>
+            <input type="text" class="ai-copilot-input-field" id="aiConsoleInput" placeholder="Ask anything about warehouse activity, inventory, or orders..." value="Show me today's fulfillment exceptions.">
+            <button type="submit" class="ai-copilot-submit-btn" id="aiConsoleBtn">
+              <span>Query AI</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </form>
         </div>
 
-        <div class="ai-pillar-box reveal">
-          <span class="ai-status-pill now">Available Now</span>
-          <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px; color: #FFFFFF;">Inventory Intelligence & Exceptions</h4>
-          <p style="font-size: 0.875rem; color: #94A3B8; line-height: 1.6;">
-            Identify stock patterns, slow-moving inventory, and potential stockouts. Surface operational anomalies before they turn into customer complaints.
-          </p>
+        <!-- Right: 3 AI Capability Modules & Live Telemetry -->
+        <div class="ai-telemetry-col reveal">
+          <!-- Card 1 -->
+          <div class="ai-feature-card-modern">
+            <div class="ai-feature-top-row">
+              <div class="ai-feature-icon-badge orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              </div>
+              <span class="ai-status-pill now">Available Now</span>
+            </div>
+            <h4 class="ai-feature-title">AI Operations Assistant</h4>
+            <p class="ai-feature-desc">
+              Ask questions about warehouse floor activity in natural language. Receive instantaneous diagnostics on order bottlenecks, carrier pickups, and picker productivity.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="ai-feature-card-modern">
+            <div class="ai-feature-top-row">
+              <div class="ai-feature-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <span class="ai-status-pill now">Available Now</span>
+            </div>
+            <h4 class="ai-feature-title">Inventory Intelligence &amp; Exceptions</h4>
+            <p class="ai-feature-desc">
+              Detect velocity patterns, slow-moving SKUs, and projected stockouts. Surface operational anomalies proactively before they can impact your end customer.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="ai-feature-card-modern">
+            <div class="ai-feature-top-row">
+              <div class="ai-feature-icon-badge green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              </div>
+              <span class="ai-status-pill roadmap">Technology Roadmap</span>
+            </div>
+            <h4 class="ai-feature-title">Predictive Insights &amp; Autonomous Agents</h4>
+            <p class="ai-feature-desc">
+              Harness historical warehouse throughput data to forecast seasonal order surges, autonomously optimize pallet slotting, and reduce manual clicks.
+            </p>
+          </div>
+
+          <!-- Bottom Live KPI Strip -->
+          <div class="ai-metric-strip-card">
+            <div class="ai-metric-box">
+              <div class="ai-metric-num highlight">12</div>
+              <div class="ai-metric-lbl">Exceptions Triage</div>
+            </div>
+            <div class="ai-metric-box">
+              <div class="ai-metric-num">+14m</div>
+              <div class="ai-metric-lbl">Carrier SLA Buffer</div>
+            </div>
+            <div class="ai-metric-box">
+              <div class="ai-metric-num">&lt; 2h</div>
+              <div class="ai-metric-lbl">Dock-to-Stock AI</div>
+            </div>
+          </div>
         </div>
 
-        <div class="ai-pillar-box reveal">
-          <span class="ai-status-pill roadmap">Technology Roadmap</span>
-          <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px; color: #FFFFFF;">Predictive Insights & Autonomous Agents</h4>
-          <p style="font-size: 0.875rem; color: #94A3B8; line-height: 1.6;">
-            Utilize historical warehouse throughput data to forecast seasonal demand, automatically optimize pallet slotting, and reduce manual tasks.
-          </p>
-        </div>
       </div>
     </div>
   </section>

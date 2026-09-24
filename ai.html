@@ -214,39 +214,67 @@
         <p class="section-subtitle">Click below to see how Wareknit AI processes complex operational inquiries in real-time.</p>
       </div>
 
-      <div class="ai-console-card reveal" style="max-width: 960px; margin: 0 auto;">
-        <div class="ai-header-bar">
-          <div class="ai-bot-ident">
-            <div class="ai-bot-avatar">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+      <div class="ai-copilot-window reveal" style="max-width: 960px; margin: 0 auto;">
+        <div class="ai-copilot-header">
+          <div class="ai-copilot-brand">
+            <div class="ai-copilot-avatar">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
             </div>
-            <div>
-              <div style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 800; color: #FFFFFF;">WAREKNIT AI AGENT TERMINAL</div>
-              <div style="font-family: var(--font-tech); font-size: 0.75rem; color: #38BDF8;">Dallas Operations Hub Model 4o-Logistics</div>
+            <div class="ai-copilot-title-box">
+              <span class="ai-copilot-name">WAREKNIT AI AGENT TERMINAL</span>
+              <span class="ai-copilot-sub">Dallas Operations Hub Model WK-4o Logistics</span>
             </div>
           </div>
-          <div class="ai-status-pill now">&check; Connected</div>
-        </div>
-
-        <div class="ai-insights-container">
-          <div class="ai-insight-row info">
-            <span style="font-size: 1.125rem;">&#128172;</span>
-            <div><strong>User Query:</strong> "Which orders are at risk of missing today's 4:00 PM carrier cutoff?"</div>
-          </div>
-
-          <div class="ai-insight-row warning">
-            <span style="font-size: 1.125rem;">&#9888;</span>
-            <div><strong>Wareknit AI Analysis:</strong> Found 4 orders in Wave 4 containing SKU-102. Inventory pick in progress at Bin A-03. Recommended action: Prioritize packing station #2 to meet FedEx Express pickup at 15:45 CST.</div>
+          <div class="ai-status-live-chip">
+            <span class="ai-live-pulse-dot"></span>
+            <span>CONNECTED // 12ms LATENCY</span>
           </div>
         </div>
 
-        <div class="ai-query-simulator">
-          <span style="color: var(--color-primary); font-family: var(--font-code); font-weight: 700; padding-left: 8px;">Simulate &gt;</span>
-          <input type="text" class="ai-query-input" value="Show me SKU-102 stock velocity and runout estimate." readonly>
-          <button class="ai-query-btn" onclick="alert('SKU-102: 48 units available. Velocity: 16 units/day. Estimated runout: 72 hours. Supplier PO #4481 recommended for immediate placement.');">
+        <div class="ai-copilot-stream" style="max-height: none;">
+          <div class="ai-insight-card info">
+            <div class="ai-insight-icon-box" style="color: #38BDF8; background: rgba(56, 189, 248, 0.15);">&#128172;</div>
+            <div class="ai-insight-text">
+              <strong>User Query:</strong>
+              <div>"Which orders are at risk of missing today's 4:00 PM carrier cutoff?"</div>
+            </div>
+          </div>
+
+          <div class="ai-insight-card warning">
+            <div class="ai-insight-icon-box" style="color: #F59E0B; background: rgba(245, 158, 11, 0.15);">&#9888;</div>
+            <div class="ai-insight-text">
+              <strong>Wareknit AI Analysis &middot; Proactive Triage:</strong>
+              <div>Found 4 orders in Wave 4 containing SKU-102. Inventory pick in progress at Bin A-03. Recommended action: Prioritize packing station #2 to meet FedEx Express pickup at 15:45 CST.</div>
+              <button class="ai-insight-action-btn" onclick="alert('Action Executed: Priority line haul assigned to Dock Door 3.');">
+                <span>⚡ Prioritize Dock Door 3</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-chips-container">
+          <div class="ai-chips-label">Pre-Built Queries:</div>
+          <div class="ai-chips-list">
+            <button class="ai-prompt-chip" onclick="document.getElementById('aiPageInput').value='Show SKU-102 stockout projection and runout date.';">
+              <span>📦 SKU-102 Runout Risk</span>
+            </button>
+            <button class="ai-prompt-chip" onclick="document.getElementById('aiPageInput').value='List all carrier SLAs with risk of breach today.';">
+              <span>⚠️ Carrier Breach Risks</span>
+            </button>
+            <button class="ai-prompt-chip" onclick="document.getElementById('aiPageInput').value='Calculate optimal wave picking schedule for afternoon shifts.';">
+              <span>⚡ Optimize Afternoon Waves</span>
+            </button>
+          </div>
+        </div>
+
+        <form class="ai-copilot-input-bar" onsubmit="event.preventDefault(); alert('Query Processed by Wareknit AI: Telemetry evaluated. Operational action plan generated.');">
+          <span class="ai-terminal-prompt-prefix">Ask Wareknit AI &gt;</span>
+          <input type="text" class="ai-copilot-input-field" id="aiPageInput" value="Show me SKU-102 stock velocity and runout estimate.">
+          <button type="submit" class="ai-copilot-submit-btn">
             <span>Run Simulation</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
-        </div>
+        </form>
       </div>
     </div>
   </section>

@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPricingToggle();
   initFeTabs();
   initFeHotspots();
+  initAiConsoleInteractivity();
 });
 
 /* ==========================================================================
@@ -623,4 +624,103 @@ function initFeHotspots() {
     pins.forEach(p => p.classList.remove('active'));
   });
 }
+
+/* ==========================================================================
+   18. WAREKNIT AI COPILOT CONSOLE INTERACTIVITY
+   ========================================================================== */
+function initAiConsoleInteractivity() {
+  const promptChips = document.querySelectorAll('.ai-prompt-chip[data-prompt]');
+  const inputField = document.getElementById('aiConsoleInput');
+
+  if (promptChips.length && inputField) {
+    promptChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const text = chip.getAttribute('data-prompt');
+        inputField.value = text;
+        inputField.focus();
+        handleAiQuerySubmit();
+      });
+    });
+  }
+}
+
+function handleAiQuerySubmit() {
+  const input = document.getElementById('aiConsoleInput');
+  const stream = document.getElementById('aiCopilotStream');
+  if (!input || !stream) return;
+
+  const queryText = input.value.trim();
+  if (!queryText) return;
+
+  // Append user query bubble
+  const userCard = document.createElement('div');
+  userCard.className = 'ai-insight-card info';
+  userCard.style.animation = 'feFadeIn 0.3s ease';
+  userCard.innerHTML = `
+    <div class="ai-insight-icon-box" style="color: #38BDF8; background: rgba(56, 189, 248, 0.15);">&#128172;</div>
+    <div class="ai-insight-text">
+      <strong>User Query:</strong>
+      <div>"${queryText}"</div>
+    </div>
+  `;
+  stream.appendChild(userCard);
+
+  // Auto scroll
+  stream.scrollTop = stream.scrollHeight;
+
+  // Simulate AI streaming response
+  setTimeout(() => {
+    const aiResponseCard = document.createElement('div');
+    aiResponseCard.className = 'ai-insight-card success';
+    aiResponseCard.style.animation = 'feFadeIn 0.4s ease';
+
+    let answerHtml = '';
+    if (queryText.toLowerCase().includes('sku-102') || queryText.toLowerCase().includes('runout')) {
+      aiResponseCard.className = 'ai-insight-card danger';
+      answerHtml = `
+        <div class="ai-insight-icon-box" style="color: #EF4444; background: rgba(239, 68, 68, 0.15);">&#9888;</div>
+        <div class="ai-insight-text">
+          <strong>Wareknit AI Analysis &middot; SKU Depletion:</strong>
+          <div>SKU-102: 48 units available. Velocity: 16 units/day. Estimated runout: 72 hours. Supplier PO #4481 recommended for immediate placement.</div>
+          <button class="ai-insight-action-btn" onclick="alert('Action Executed: Supplier PO #4481 submitted to vendor.');">
+            <span>📦 Submit Supplier PO</span>
+          </button>
+        </div>
+      `;
+    } else if (queryText.toLowerCase().includes('wave 4') || queryText.toLowerCase().includes('station')) {
+      aiResponseCard.className = 'ai-insight-card warning';
+      answerHtml = `
+        <div class="ai-insight-icon-box" style="color: #F59E0B; background: rgba(245, 158, 11, 0.15);">&#9888;</div>
+        <div class="ai-insight-text">
+          <strong>Wareknit AI Analysis &middot; Wave 4 Routing:</strong>
+          <div>Wave 4 contains 142 units across Aisle B-02 and A-03. Recommended action: Route 4 pickers to Station #2 to meet FedEx 15:45 cutoff.</div>
+          <button class="ai-insight-action-btn" onclick="alert('Action Executed: RF Pickers routed to Station #2.');">
+            <span>⚡ Apply Wave Balancing</span>
+          </button>
+        </div>
+      `;
+    } else if (queryText.toLowerCase().includes('carrier') || queryText.toLowerCase().includes('rate')) {
+      answerHtml = `
+        <div class="ai-insight-icon-box" style="color: #10B981; background: rgba(16, 185, 129, 0.15);">&#10003;</div>
+        <div class="ai-insight-text">
+          <strong>Wareknit AI Analysis &middot; Rate Optimization:</strong>
+          <div>Rate shopping evaluated 1,284 parcels across FedEx, UPS, and USPS. Automated zone skipping saved $842.10 today (14.2% reduction).</div>
+        </div>
+      `;
+    } else {
+      answerHtml = `
+        <div class="ai-insight-icon-box" style="color: #10B981; background: rgba(16, 185, 129, 0.15);">&#10003;</div>
+        <div class="ai-insight-text">
+          <strong>Wareknit AI Analysis &middot; Operational Health:</strong>
+          <div>1,284 orders in progress. 12 exceptions triaged. Dallas Hub operating at 99.8% SLA precision with 14 min average carrier buffer.</div>
+        </div>
+      `;
+    }
+
+    aiResponseCard.innerHTML = answerHtml;
+    stream.appendChild(aiResponseCard);
+    stream.scrollTop = stream.scrollHeight;
+  }, 400);
+}
+
 
