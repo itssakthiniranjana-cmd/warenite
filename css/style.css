@@ -4034,25 +4034,70 @@ button, input, select, textarea {
    WAREKNIT TECH-ENABLED 3PL EXTENDED DESIGN SYSTEM & COMPONENTS
    ========================================================================== */
 
-/* Capabilities Strip */
+/* Capabilities Running Marquee Strip */
 .capabilities-bar {
   background: var(--color-secondary);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 22px 0;
+  padding: 16px 0;
   color: #FFFFFF;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-.capabilities-list {
+.capabilities-bar::before,
+.capabilities-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.capabilities-bar::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--color-secondary) 0%, rgba(10, 33, 64, 0) 100%);
+}
+
+.capabilities-bar::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--color-secondary) 0%, rgba(10, 33, 64, 0) 100%);
+}
+
+.capabilities-ticker-track {
+  display: flex;
+  width: max-content;
+  user-select: none;
+}
+
+.capabilities-ticker-group {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 36px;
+  padding-right: 36px;
+  flex-shrink: 0;
+  animation: capabilitiesMarquee 26s linear infinite;
+  will-change: transform;
+}
+
+.capabilities-bar:hover .capabilities-ticker-group {
+  animation-play-state: paused;
+}
+
+@keyframes capabilitiesMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .capability-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
   font-family: var(--font-heading);
@@ -4060,6 +4105,7 @@ button, input, select, textarea {
   font-weight: 700;
   color: #FFFFFF;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .capability-icon-dot {
@@ -4069,11 +4115,13 @@ button, input, select, textarea {
   background: var(--color-primary);
   box-shadow: 0 0 10px var(--color-primary-glow);
   flex-shrink: 0;
+  display: inline-block;
 }
 
 .capability-divider {
-  color: rgba(255, 255, 255, 0.2);
-  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 1.125rem;
+  display: inline-block;
 }
 
 /* 3 Pillars: PHYSICAL -> DIGITAL -> INTELLIGENCE */
