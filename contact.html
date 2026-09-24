@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Logixo - Logistics & Transportation HTML Template</title>
-  <meta name="description" content="Get in touch with Logixo logistics specialists, customer dispatch desks, and our Dallas DFW freight facility.">
+  <title>Contact Us & Dallas Operations Center | Wareknit Logistics</title>
+  <meta name="description" content="Get in touch with Wareknit Logistics in Dallas, Texas. Schedule a physical warehouse tour, request integration assistance, or discuss 3PL fulfillment.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5E14'><path d='M20 7l-8-4-8 4 8 4 8-4zm0 6l-8 4-8-4m16 4l-8 4-8-4'/></svg>">
 </head>
@@ -16,15 +16,11 @@
       <div class="topbar-left">
         <div class="topbar-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span>Dallas / DFW Freight Center, Texas, USA</span>
+          <span>Dallas / DFW Logistics Operations Hub, Texas, USA</span>
         </div>
         <div class="topbar-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span>info@logixo.com</span>
-        </div>
-        <div class="topbar-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-          <span>Mon - Sat: 8:00 AM - 7:00 PM</span>
+          <span>info@wareknit.com</span>
         </div>
       </div>
       <div class="topbar-right">
@@ -36,14 +32,14 @@
     </div>
   </aside>
 
-  <!-- ================= MAIN HEADER NAVIGATION ================= -->
+  <!-- ================= MAIN HEADER NAVIGATION (5 Items Strict) ================= -->
   <header class="site-header">
     <div class="container navbar">
-      <a href="index.html" class="brand-logo" aria-label="Warenite Home">
-        <img src="images/logo.png" alt="Warenite Logo" class="brand-logo-img">
+      <a href="index.html" class="brand-logo" aria-label="Wareknit Logistics Home">
+        <img src="images/logo.png" alt="Wareknit Logistics Logo" class="brand-logo-img">
         <div class="logo-text">
-          <span class="logo-title">WARENITE<span>.</span></span>
-          <span class="logo-subtitle">Logistics & Supply Chain</span>
+          <span class="logo-title">WAREKNIT<span>.</span></span>
+          <span class="logo-subtitle">Logistics & Technology</span>
         </div>
       </a>
 
@@ -61,8 +57,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </a>
 
-        <!-- Side-Area Hamburger Drawer Trigger -->
-        <button class="header-icon-btn side-toggle-btn" id="sideAreaToggle" aria-label="Open Side Panel">
+        <button class="header-icon-btn side-toggle-btn" id="sideAreaToggle" aria-label="Open Navigation Drawer">
           <span class="side-toggle-line"></span>
           <span class="side-toggle-line"></span>
           <span class="side-toggle-line"></span>
@@ -75,254 +70,106 @@
     </div>
   </header>
 
-  <!-- ================= SEARCH MODAL OVERLAY ================= -->
-  <div class="search-modal-overlay" id="searchModalOverlay">
-    <div class="search-modal-container">
-      <button class="search-modal-close-btn" id="searchModalClose" aria-label="Close Search">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-      <form id="headerSearchForm">
-        <div class="search-input-group">
-          <input type="text" class="search-input-field" id="headerSearchInput" placeholder="Search logistics services, air freight, ocean shipping..." autocomplete="off">
-          <button type="submit" class="search-submit-btn" aria-label="Submit search">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          </button>
-        </div>
-      </form>
-      <div class="search-suggestions">
-        <span style="color: #FFFFFF; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase;">Popular:</span>
-        <button class="search-suggestion-pill">Air Freight</button>
-        <button class="search-suggestion-pill">Ocean Cargo</button>
-        <button class="search-suggestion-pill">Warehousing</button>
-        <button class="search-suggestion-pill">Instant Quote</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= SIDE-AREA SLIDING DRAWER ================= -->
+  <!-- Side-Area Sliding Drawer -->
   <div class="side-area-backdrop" id="sideAreaBackdrop"></div>
   <aside class="side-area-drawer" id="sideAreaDrawer">
     <div>
       <button class="side-area-close-btn" id="sideAreaClose" aria-label="Close Side Drawer">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
-
       <div class="side-area-header">
         <div class="brand-logo">
-          <img src="images/logo.png" alt="Warenite Logo" class="brand-logo-img">
-          <div class="logo-text">
-            <span class="logo-title">WARENITE<span>.</span></span>
-          </div>
+          <img src="images/logo.png" alt="Wareknit Logo" class="brand-logo-img">
+          <div class="logo-text"><span class="logo-title">WAREKNIT<span>.</span></span></div>
         </div>
-        <p class="side-area-description">
-          Global supply chain management, next-gen air express logistics, high-capacity ocean shipping, and smart WMS warehousing.
-        </p>
+        <p class="side-area-description">A physical operation with a digital brain. Dallas-based warehousing, fulfillment, WMS technology and AI-driven intelligence.</p>
       </div>
-
       <nav class="side-area-nav">
         <a href="index.html"><span>Home</span> <span>&rarr;</span></a>
-        <a href="about.html"><span>About Us</span> <span>&rarr;</span></a>
-        <a href="services.html"><span>Services</span> <span>&rarr;</span></a>
-        <a href="industries.html"><span>Industry</span> <span>&rarr;</span></a>
+        <a href="about.html"><span>About Us &amp; Dallas Hub</span> <span>&rarr;</span></a>
+        <a href="services.html"><span>3PL Services</span> <span>&rarr;</span></a>
+        <a href="technology.html"><span>WMS &amp; Technology</span> <span>&rarr;</span></a>
+        <a href="ai.html"><span>AI for Logistics</span> <span>&rarr;</span></a>
+        <a href="industries.html"><span>Industry Solutions</span> <span>&rarr;</span></a>
+        <a href="quote.html"><span>Request a Quote</span> <span>&rarr;</span></a>
         <a href="contact.html"><span>Contact Us</span> <span>&rarr;</span></a>
       </nav>
-
-      <div class="side-area-contact-box">
-        <div class="side-area-contact-title">Headquarters</div>
-        <div class="side-area-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span>DFW Airport Cargo Gateway, Dallas, TX 75261</span>
-        </div>
-        <div class="side-area-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
-          <a href="tel:+12145550190" style="color: #FFFFFF; font-weight: 700;">+1 (214) 555-0190</a>
-        </div>
-        <div class="side-area-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span>info@warenite.com</span>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="side-area-socials">
-        <a href="https://linkedin.com" target="_blank" class="side-social-link" aria-label="LinkedIn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        <a href="https://instagram.com" target="_blank" class="side-social-link" aria-label="Instagram">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <a href="https://facebook.com" target="_blank" class="side-social-link" aria-label="Facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-        </a>
-      </div>
-      <div style="font-size: 0.75rem; color: #64748B; margin-top: 15px;">
-        © 2026 Warenite. All rights reserved.
-      </div>
     </div>
   </aside>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
-  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div class="brand-logo">
-        <img src="images/logo.png" alt="Warenite Logo" class="brand-logo-img">
-        <span class="logo-title">WARENITE<span>.</span></span>
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner" style="background: linear-gradient(135deg, #071930 0%, #0A2140 100%); padding: 60px 0; color: #FFFFFF;">
+    <div class="container" style="text-align: center;">
+      <div class="sub-title-tag" style="background: rgba(255, 94, 20, 0.2); color: #FF9466; border-color: rgba(255, 94, 20, 0.4); margin: 0 auto 16px;">
+        <span class="tag-slash">//</span> OPERATIONS CENTER
       </div>
-      <button id="mobileMenuClose" style="background: none; color: var(--color-secondary); cursor: pointer;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 18px; margin-top: 20px;">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="industries.html" class="nav-link">Industry</a>
-      <a href="contact.html" class="nav-link active">Contact Us</a>
-      <a href="quote.html" class="btn btn-primary" style="margin-top: 10px;">Get a Quote</a>
-    </div>
-  </aside>
-
-  <!-- ================= INNER PAGE BANNER ================= -->
-  <section class="page-header-banner">
-    <div class="container page-header-content">
-      <div class="sub-title-tag" style="justify-content: center;">
-        <span class="tag-slash">//</span> GET IN TOUCH
-      </div>
-      <h1 class="page-header-title">Contact Logixo Support</h1>
-      <p class="page-header-desc">
-        Have questions about booking a shipment, our Dallas facility, or enterprise supply chain solutions? Our team is available 24/7.
+      <h1 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; margin-bottom: 12px;">Contact Wareknit Logistics.</h1>
+      <p style="color: #94A3B8; max-width: 640px; margin: 0 auto; font-size: 1rem; line-height: 1.6;">
+        Reach our Dallas dispatch desk, book a facility tour, or discuss API integrations with our technical team.
       </p>
-      <div class="breadcrumb-trail">
-        <a href="index.html">Home</a>
-        <span>/</span>
-        <span style="color: #FFFFFF;">Contact Us</span>
-      </div>
     </div>
   </section>
 
-  <!-- ================= 01. CONTACT INFO CARDS ================= -->
-  <section class="section-padding bg-light">
+  <!-- ================= CONTACT DETAILS & FORM ================= -->
+  <section class="section-padding bg-slate">
     <div class="container">
-      <div class="contact-info-grid">
-        <!-- Card 1 -->
-        <div class="contact-info-card">
-          <div class="contact-icon-box">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          </div>
-          <h4>Our Headquarters</h4>
-          <p>DFW Freight Corridor<br>Dallas, TX 75261, USA</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="contact-info-card">
-          <div class="contact-icon-box">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
-          </div>
-          <h4>Direct Phone Lines</h4>
-          <p><a href="tel:+12145550190" style="font-weight: 700; color: var(--color-primary);">+1 (214) 555-0190</a><br>Mon-Sat: 8:00 AM - 7:00 PM</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="contact-info-card">
-          <div class="contact-icon-box">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </div>
-          <h4>Email Inquiries</h4>
-          <p><a href="mailto:info@logixo.com" style="font-weight: 700; color: var(--color-primary);">info@logixo.com</a><br>dispatch@logixo.com</p>
-        </div>
-      </div>
-
-      <!-- ================= CONTACT FORM & MAP ================= -->
-      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: flex-start;">
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px;">
         
-        <div class="contact-form-container">
-          <div class="sub-title-tag">
-            <span class="tag-slash">//</span> SEND US A MESSAGE
+        <!-- Col 1: Contact Cards -->
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div class="pillar-card reveal">
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 14px;">Dallas Operations Hub</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-body); line-height: 1.6; margin-bottom: 16px;">
+              📍 <strong>Address:</strong> DFW Logistics Gateway Corridor, Dallas, TX 75261, USA<br>
+              📞 <strong>Phone:</strong> <a href="tel:+12145550190" style="color: var(--color-primary); font-weight: 700;">+1 (214) 555-0190</a><br>
+              ✉️ <strong>Email:</strong> <a href="mailto:info@wareknit.com" style="color: var(--color-primary); font-weight: 700;">info@wareknit.com</a>
+            </p>
+            <div style="font-size: 0.8125rem; color: var(--color-text-muted);">
+              <strong>Facility Receiving Hours:</strong><br>
+              Mon - Fri: 7:00 AM - 7:00 PM CST<br>
+              Saturday: 8:00 AM - 4:00 PM CST (By appointment)
+            </div>
           </div>
-          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 24px;">How Can We Help Your Business?</h2>
-          
-          <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('contactSentBox').style.display='block';">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+
+          <div class="pillar-card highlight reveal">
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 10px;">Schedule a Facility Walkthrough</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-body); line-height: 1.6; margin-bottom: 16px;">
+              See our high-bay selective racking, RF wave sorting lines, and digital WMS dispatch stations in person in Dallas.
+            </p>
+            <a href="quote.html" class="btn btn-primary btn-sm">Schedule Facility Visit</a>
+          </div>
+        </div>
+
+        <!-- Col 2: General Message Form -->
+        <div class="quote-card-container reveal">
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 20px;">Send Us a Message</h3>
+          <form onsubmit="event.preventDefault(); alert('Thank you for contacting Wareknit Logistics. Our Dallas operations team will reply shortly.');">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
               <div>
-                <label style="display: block; font-weight: 700; color: var(--color-text-main); margin-bottom: 8px; font-size: 0.875rem;">Your Name *</label>
-                <input type="text" class="form-control-lg" placeholder="John Smith" required>
+                <label style="display: block; font-size: 0.8125rem; font-weight: 700; color: var(--color-secondary); margin-bottom: 6px;">Your Name *</label>
+                <input type="text" class="input-field" placeholder="John Doe" required>
               </div>
               <div>
-                <label style="display: block; font-weight: 700; color: var(--color-text-main); margin-bottom: 8px; font-size: 0.875rem;">Email Address *</label>
-                <input type="email" class="form-control-lg" placeholder="john@company.com" required>
+                <label style="display: block; font-size: 0.8125rem; font-weight: 700; color: var(--color-secondary); margin-bottom: 6px;">Work Email *</label>
+                <input type="email" class="input-field" placeholder="john@company.com" required>
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-              <div>
-                <label style="display: block; font-weight: 700; color: var(--color-text-main); margin-bottom: 8px; font-size: 0.875rem;">Phone Number</label>
-                <input type="tel" class="form-control-lg" placeholder="+1 (214) 000-0000">
-              </div>
-              <div>
-                <label style="display: block; font-weight: 700; color: var(--color-text-main); margin-bottom: 8px; font-size: 0.875rem;">Subject</label>
-                <select class="form-control-lg">
-                  <option>General Freight Inquiry</option>
-                  <option>Dallas Facility Tour</option>
-                  <option>Customs Brokerage</option>
-                  <option>Technology & API Integration</option>
-                </select>
-              </div>
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 0.8125rem; font-weight: 700; color: var(--color-secondary); margin-bottom: 6px;">Subject *</label>
+              <input type="text" class="input-field" placeholder="General Inquiry / Facility Tour / Partnership" required>
             </div>
 
-            <div style="margin-bottom: 24px;">
-              <label style="display: block; font-weight: 700; color: var(--color-text-main); margin-bottom: 8px; font-size: 0.875rem;">Your Message *</label>
-              <textarea class="form-control-lg" rows="5" placeholder="Tell us how we can assist you..." required></textarea>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 0.8125rem; font-weight: 700; color: var(--color-secondary); margin-bottom: 6px;">Message *</label>
+              <textarea class="input-field" rows="4" placeholder="How can Wareknit Logistics help your business?" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; height: 54px;">
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
               <span>Send Message</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
           </form>
-
-          <div id="contactSentBox" style="display: none; margin-top: 20px; background: var(--color-primary-light); border: 1.5px solid var(--color-primary); border-radius: var(--radius-md); padding: 18px; text-align: center;">
-            <p style="color: var(--color-primary); font-weight: 800; font-size: 1rem;">Thank you! Your message has been sent to our dispatch team.</p>
-          </div>
-        </div>
-
-        <!-- Right Side: Logistics Hub Details & FAQ -->
-        <div>
-          <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm); margin-bottom: 30px;">
-            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--color-text-main); margin-bottom: 14px;">Dallas Logistics Corridor</h3>
-            <p style="font-size: 0.9375rem; color: var(--color-text-body); line-height: 1.6; margin-bottom: 18px;">
-              Direct access to DFW International Airport and major interstate arteries (I-35, I-20, I-30).
-            </p>
-            <div style="background: var(--color-bg-body); padding: 16px; border-radius: var(--radius-sm); font-size: 0.875rem; color: var(--color-text-main); border: 1px solid var(--color-border);">
-              <strong>Operating Hours:</strong><br>
-              Receiving Dock: Mon – Fri (7:00 AM – 6:00 PM)<br>
-              Dispatch Desk: 24/7 Mon – Sun
-            </div>
-          </div>
-
-          <!-- FAQ Component -->
-          <div class="faq-list">
-            <div class="faq-item active">
-              <button class="faq-header" onclick="this.parentElement.classList.toggle('active');">
-                <span>How fast can I get a freight quote?</span>
-                <span style="color: var(--color-primary); font-weight: 800;">+</span>
-              </button>
-              <div class="faq-body">
-                Standard domestic road and air quotes are delivered online in under 15 minutes. Complex multi-modal ocean freight quotes are confirmed within 2 hours.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-header" onclick="this.parentElement.classList.toggle('active');">
-                <span>Do you offer bonded warehouse storage?</span>
-                <span style="color: var(--color-primary); font-weight: 800;">+</span>
-              </button>
-              <div class="faq-body">
-                Yes, our Dallas facility includes secure CBP-bonded storage zones for deferred duty imported freight.
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
@@ -332,68 +179,61 @@
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <!-- Col 1: About -->
       <div class="footer-brand">
         <div class="brand-logo">
-          <img src="images/logo.png" alt="Warenite Logo" class="brand-logo-img">
+          <img src="images/logo.png" alt="Wareknit Logo" class="brand-logo-img">
           <div class="logo-text">
-            <span class="logo-title" style="color: #FFFFFF;">WARENITE<span>.</span></span>
-            <span class="logo-subtitle" style="color: var(--color-primary);">Logistics & Supply Chain</span>
+            <span class="logo-title" style="color: #FFFFFF;">WAREKNIT<span>.</span></span>
+            <span class="logo-subtitle" style="color: var(--color-primary);">Logistics & Technology</span>
           </div>
         </div>
-        <p>
-          Fast, reliable, and technology-driven global logistics and freight solutions. Connecting businesses worldwide with precision.
-        </p>
+        <p>A physical operation with a digital brain. Dallas-based warehousing, fulfillment, WMS technology and AI-driven intelligence.</p>
         <div style="font-family: var(--font-tech); font-size: 0.8125rem; color: #CBD5E1;">
-          📍 DFW Freight Center, Dallas, TX 75261, USA<br>
-          📞 +1 (214) 555-0190 | ✉️ info@warenite.com
+          📍 DFW Logistics Hub, Dallas, TX 75261, USA<br>
+          📞 +1 (214) 555-0190 | ✉️ info@wareknit.com
         </div>
       </div>
 
-      <!-- Col 2: Quick Links -->
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4>Navigation</h4>
         <ul class="footer-links-list">
-          <li><a href="about.html" class="footer-link">About Our Company</a></li>
-          <li><a href="services.html" class="footer-link">Our Services</a></li>
-          <li><a href="technology.html" class="footer-link">Technology & WMS</a></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us & Dallas Hub</a></li>
+          <li><a href="services.html" class="footer-link">3PL Services</a></li>
+          <li><a href="technology.html" class="footer-link">WMS & Technology</a></li>
+          <li><a href="ai.html" class="footer-link">AI for Logistics</a></li>
           <li><a href="industries.html" class="footer-link">Industry Solutions</a></li>
-          <li><a href="quote.html" class="footer-link">Get A Free Quote</a></li>
+          <li><a href="quote.html" class="footer-link">Request a Quote</a></li>
           <li><a href="contact.html" class="footer-link">Contact Us</a></li>
         </ul>
       </div>
 
-      <!-- Col 3: Services -->
       <div class="footer-col">
-        <h4>Core Services</h4>
+        <h4>Core 3PL Services</h4>
         <ul class="footer-links-list">
-          <li><a href="services.html#air" class="footer-link">Air Freight Shipping</a></li>
-          <li><a href="services.html#ocean" class="footer-link">Ocean Cargo Transport</a></li>
-          <li><a href="services.html#road" class="footer-link">Road / Land Freight</a></li>
           <li><a href="services.html#warehousing" class="footer-link">Warehousing & Storage</a></li>
-          <li><a href="services.html#supplychain" class="footer-link">Supply Chain Management</a></li>
-          <li><a href="services.html#brokerage" class="footer-link">Customs Clearance</a></li>
+          <li><a href="services.html#fulfillment" class="footer-link">Order Fulfillment</a></li>
+          <li><a href="services.html#inventory" class="footer-link">Inventory Management</a></li>
+          <li><a href="services.html#receiving" class="footer-link">Receiving & Putaway</a></li>
+          <li><a href="services.html#b2b" class="footer-link">B2B Wholesale Fulfillment</a></li>
+          <li><a href="services.html#b2c" class="footer-link">B2C E-Commerce Fulfillment</a></li>
+          <li><a href="services.html#kitting" class="footer-link">Kitting & Assembly</a></li>
+          <li><a href="services.html#returns" class="footer-link">Returns Management</a></li>
         </ul>
       </div>
 
-      <!-- Col 4: Newsletter -->
       <div class="footer-col">
-        <h4>Newsletter</h4>
-        <p style="font-size: 0.875rem; color: #94A3B8; margin-bottom: 12px;">
-          Subscribe to our weekly freight rates update and global supply chain insights.
-        </p>
-        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Logixo Freight Briefing!');">
+        <h4>Logistics Briefing</h4>
+        <p style="font-size: 0.875rem; color: #94A3B8; margin-bottom: 12px;">Subscribe for monthly Dallas supply chain intelligence.</p>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
           <input type="email" class="footer-input" placeholder="Your business email..." required>
           <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
         </form>
       </div>
     </div>
 
-    <!-- Bottom copyright -->
     <div class="container footer-bottom">
-      <div>
-        &copy; 2026 Logixo. All Rights Reserved. Powered by ThemeServices.
-      </div>
+      <div>&copy; 2026 Wareknit Logistics LLC. All Rights Reserved. Dallas, Texas, USA.</div>
       <div style="display: flex; gap: 20px;">
         <a href="#" class="footer-link">Privacy Policy</a>
         <a href="#" class="footer-link">Terms of Service</a>
@@ -401,11 +241,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="backToTopBtn" aria-label="Scroll to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </button>
 
   <script src="js/main.js"></script>
 </body>

@@ -87,7 +87,7 @@ function initHeroSlider() {
   const showcaseContainer = document.querySelector('.hero-showcase-section');
 
   if (showcaseSlides.length) {
-    let currentSlide = 1; // Default to Slide 1 (Professional Packing and Delivery)
+    let currentSlide = 0; // Default to Slide 0 (Logistics Powered by Intelligence)
     let autoTimer = null;
     const duration = 6500;
 

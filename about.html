@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Logixo - Logistics & Transportation HTML Template</title>
-  <meta name="description" content="Logixo is a premier global logistics, freight forwarding, and warehousing provider with over 25+ years of dedicated supply chain expertise.">
+  <title>About Us & Dallas Facility | Wareknit Logistics — Tech-Enabled 3PL</title>
+  <meta name="description" content="Discover the Wareknit story: a technology-enabled 3PL in Dallas, Texas combining physical warehouse operations with modern WMS software and AI intelligence.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5E14'><path d='M20 7l-8-4-8 4 8 4 8-4zm0 6l-8 4-8-4m16 4l-8 4-8-4'/></svg>">
 </head>
@@ -16,15 +16,11 @@
       <div class="topbar-left">
         <div class="topbar-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span>Dallas / DFW Freight Center, Texas, USA</span>
+          <span>Dallas / DFW Logistics Operations Hub, Texas, USA</span>
         </div>
         <div class="topbar-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span>info@logixo.com</span>
-        </div>
-        <div class="topbar-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-          <span>Mon - Sat: 8:00 AM - 7:00 PM</span>
+          <span>info@wareknit.com</span>
         </div>
       </div>
       <div class="topbar-right">
@@ -36,14 +32,14 @@
     </div>
   </aside>
 
-  <!-- ================= MAIN HEADER NAVIGATION ================= -->
+  <!-- ================= MAIN HEADER NAVIGATION (5 Items Strict) ================= -->
   <header class="site-header">
     <div class="container navbar">
-      <a href="index.html" class="brand-logo" aria-label="Warenite Home">
-        <img src="images/logo.png" alt="Warenite Logo" class="brand-logo-img">
+      <a href="index.html" class="brand-logo" aria-label="Wareknit Logistics Home">
+        <img src="images/logo.png" alt="Wareknit Logistics Logo" class="brand-logo-img">
         <div class="logo-text">
-          <span class="logo-title">WARENITE<span>.</span></span>
-          <span class="logo-subtitle">Logistics & Supply Chain</span>
+          <span class="logo-title">WAREKNIT<span>.</span></span>
+          <span class="logo-subtitle">Logistics & Technology</span>
         </div>
       </a>
 
@@ -61,8 +57,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </a>
 
-        <!-- Side-Area Hamburger Drawer Trigger -->
-        <button class="header-icon-btn side-toggle-btn" id="sideAreaToggle" aria-label="Open Side Panel">
+        <button class="header-icon-btn side-toggle-btn" id="sideAreaToggle" aria-label="Open Navigation Drawer">
           <span class="side-toggle-line"></span>
           <span class="side-toggle-line"></span>
           <span class="side-toggle-line"></span>
@@ -75,393 +70,139 @@
     </div>
   </header>
 
-  <!-- ================= SEARCH MODAL OVERLAY ================= -->
-  <div class="search-modal-overlay" id="searchModalOverlay">
-    <div class="search-modal-container">
-      <button class="search-modal-close-btn" id="searchModalClose" aria-label="Close Search">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-      <form id="headerSearchForm">
-        <div class="search-input-group">
-          <input type="text" class="search-input-field" id="headerSearchInput" placeholder="Search logistics services, air freight, ocean shipping..." autocomplete="off">
-          <button type="submit" class="search-submit-btn" aria-label="Submit search">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          </button>
-        </div>
-      </form>
-      <div class="search-suggestions">
-        <span style="color: #FFFFFF; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase;">Popular:</span>
-        <button class="search-suggestion-pill">Air Freight</button>
-        <button class="search-suggestion-pill">Ocean Cargo</button>
-        <button class="search-suggestion-pill">Warehousing</button>
-        <button class="search-suggestion-pill">Instant Quote</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= SIDE-AREA SLIDING DRAWER ================= -->
+  <!-- Side-Area Sliding Drawer -->
   <div class="side-area-backdrop" id="sideAreaBackdrop"></div>
   <aside class="side-area-drawer" id="sideAreaDrawer">
     <div>
       <button class="side-area-close-btn" id="sideAreaClose" aria-label="Close Side Drawer">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
-
       <div class="side-area-header">
         <div class="brand-logo">
-          <img src="images/logo.png" alt="Warenite Logo" class="brand-logo-img">
-          <div class="logo-text">
-            <span class="logo-title">WARENITE<span>.</span></span>
-          </div>
+          <img src="images/logo.png" alt="Wareknit Logo" class="brand-logo-img">
+          <div class="logo-text"><span class="logo-title">WAREKNIT<span>.</span></span></div>
         </div>
-        <p class="side-area-description">
-          Global supply chain management, next-gen air express logistics, high-capacity ocean shipping, and smart WMS warehousing.
-        </p>
+        <p class="side-area-description">A physical operation with a digital brain. Dallas-based warehousing, fulfillment, WMS technology and AI-driven intelligence.</p>
       </div>
-
       <nav class="side-area-nav">
         <a href="index.html"><span>Home</span> <span>&rarr;</span></a>
-        <a href="about.html"><span>About Us</span> <span>&rarr;</span></a>
-        <a href="services.html"><span>Services</span> <span>&rarr;</span></a>
-        <a href="industries.html"><span>Industry</span> <span>&rarr;</span></a>
+        <a href="about.html"><span>About Us &amp; Dallas Hub</span> <span>&rarr;</span></a>
+        <a href="services.html"><span>3PL Services</span> <span>&rarr;</span></a>
+        <a href="technology.html"><span>WMS &amp; Technology</span> <span>&rarr;</span></a>
+        <a href="ai.html"><span>AI for Logistics</span> <span>&rarr;</span></a>
+        <a href="industries.html"><span>Industry Solutions</span> <span>&rarr;</span></a>
+        <a href="quote.html"><span>Request a Quote</span> <span>&rarr;</span></a>
         <a href="contact.html"><span>Contact Us</span> <span>&rarr;</span></a>
       </nav>
-
-      <div class="side-area-contact-box">
-        <div class="side-area-contact-title">Headquarters</div>
-        <div class="side-area-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span>DFW Airport Cargo Gateway, Dallas, TX 75261</span>
-        </div>
-        <div class="side-area-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
-          <a href="tel:+12145550190" style="color: #FFFFFF; font-weight: 700;">+1 (214) 555-0190</a>
-        </div>
-        <div class="side-area-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span>info@warenite.com</span>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="side-area-socials">
-        <a href="https://linkedin.com" target="_blank" class="side-social-link" aria-label="LinkedIn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        <a href="https://instagram.com" target="_blank" class="side-social-link" aria-label="Instagram">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <a href="https://facebook.com" target="_blank" class="side-social-link" aria-label="Facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-        </a>
-      </div>
-      <div style="font-size: 0.75rem; color: #64748B; margin-top: 15px;">
-        © 2026 Warenite. All rights reserved.
-      </div>
     </div>
   </aside>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
-  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div class="brand-logo">
-        <img src="images/logo.png" alt="Warenite Logo" class="brand-logo-img">
-        <span class="logo-title">WARENITE<span>.</span></span>
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner" style="background: linear-gradient(135deg, #071930 0%, #0A2140 100%); padding: 80px 0; color: #FFFFFF;">
+    <div class="container" style="text-align: center;">
+      <div class="sub-title-tag" style="background: rgba(255, 94, 20, 0.2); color: #FF9466; border-color: rgba(255, 94, 20, 0.4); margin: 0 auto 16px;">
+        <span class="tag-slash">//</span> THE WAREKNIT STORY
       </div>
-      <button id="mobileMenuClose" style="background: none; color: var(--color-secondary); cursor: pointer;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 18px; margin-top: 20px;">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link active">About Us</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="industries.html" class="nav-link">Industry</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-      <a href="quote.html" class="btn btn-primary" style="margin-top: 10px;">Get a Quote</a>
-    </div>
-  </aside>
-
-  <!-- ================= INNER PAGE BANNER ================= -->
-  <section class="page-header-banner">
-    <div class="container page-header-content">
-      <div class="sub-title-tag" style="justify-content: center;">
-        <span class="tag-slash">//</span> KNOW WHO WE ARE
-      </div>
-      <h1 class="page-header-title">About Our Company</h1>
-      <p class="page-header-desc">
-        We provide complete, technology-driven global logistics and freight solutions backed by over 25+ years of operational excellence.
+      <h1 style="font-family: var(--font-heading); font-size: 2.75rem; font-weight: 800; margin-bottom: 16px;">A Physical Operation With a Digital Brain.</h1>
+      <p style="color: #94A3B8; max-width: 680px; margin: 0 auto 24px; font-size: 1.0625rem; line-height: 1.6;">
+        Wareknit Logistics is building a new generation of 3PL in Dallas, Texas. We don't just store and ship products—we connect your inventory, physical warehouse operations, and software into one smarter fulfillment ecosystem.
       </p>
-      <div class="breadcrumb-trail">
-        <a href="index.html">Home</a>
-        <span>/</span>
-        <span style="color: #FFFFFF;">About Us</span>
+      <div style="display: flex; gap: 14px; justify-content: center;">
+        <a href="quote.html" class="btn btn-primary">Partner With Wareknit</a>
+        <a href="technology.html" class="btn btn-outline" style="border-color: rgba(255, 255, 255, 0.3); color: #FFFFFF;">Explore WMS Technology &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= 01. ABOUT MAIN SECTION ================= -->
-  <section class="section-padding about-section">
+  <!-- ================= OUR PHILOSOPHY ================= -->
+  <section class="section-padding bg-white">
     <div class="container about-grid">
-      <!-- Dual Image Stack with 25+ Experience Box -->
-      <div class="about-img-stack reveal">
-        <img src="images/dallas_facility.jpg" alt="Logixo Logistics Distribution Center" class="about-main-img">
-        <img src="images/logixo_ocean.jpg" alt="Ocean Container Cargo Ship" class="about-sub-img">
-        
-        <!-- Video Play Trigger -->
-        <button class="video-play-btn" aria-label="Play Facility Video Tour">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-        </button>
-
-        <div class="about-experience-box">
-          <div class="about-exp-num">25+</div>
-          <div class="about-exp-text">Years Working<br>Experience</div>
+      <div class="dallas-visual-frame reveal">
+        <img src="images/dallas_facility.jpg" alt="Wareknit Dallas Logistics Hub">
+        <div class="dallas-overlay-badge">
+          <div class="dallas-spec-item">
+            <div class="dallas-spec-val" style="color: var(--color-primary);">Dallas, TX</div>
+            <div class="dallas-spec-lbl">Primary Operations Hub</div>
+          </div>
+          <div class="dallas-spec-item">
+            <div class="dallas-spec-val">48 Hours</div>
+            <div class="dallas-spec-lbl">93% US Ground Reach</div>
+          </div>
+          <div class="dallas-spec-item">
+            <div class="dallas-spec-val">99.8%</div>
+            <div class="dallas-spec-lbl">Order SLA Precision</div>
+          </div>
         </div>
       </div>
 
-      <!-- Content -->
-      <div>
-        <div class="sub-title-tag">
-          <span class="tag-slash">//</span> ABOUT LOGIXO
-        </div>
-        <h2 class="section-title">Reliable Logistics Solutions Delivered Worldwide.</h2>
+      <div class="reveal">
+        <div class="sub-title-tag"><span class="tag-slash">//</span> THE BIG IDEA</div>
+        <h2 class="section-title">Don't Sell Warehouse Space. Sell a Smarter Logistics Operation.</h2>
         <p style="color: var(--color-text-body); line-height: 1.7; margin-bottom: 20px;">
-          Logixo was established with a singular mission: to eliminate supply chain friction and deliver cargo with 100% precision. Combining state-of-the-art warehousing in Dallas, Texas with a global air, ocean, and ground transportation network, we handle every consignment with enterprise care.
+          Traditional 3PLs view fulfillment as square footage and labor hours. At Wareknit, we believe fulfillment is a technology discipline built upon physical excellence.
         </p>
         <p style="color: var(--color-text-body); line-height: 1.7; margin-bottom: 24px;">
-          Our physical facilities operate with an intelligent digital brain—giving our clients 24/7 real-time telemetry, automated barcode verification, and predictive delivery scheduling.
+          Our founders combine extensive backgrounds in Warehouse Management Systems (WMS), enterprise supply chain orchestration, and modern AI algorithms. We built Wareknit from the ground up around connected data.
         </p>
 
-        <div class="about-feature-list">
-          <div class="about-feature-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Real-Time GPS Tracking & Visibility</span>
-          </div>
-          <div class="about-feature-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Multi-Modal Air, Sea & Land Transport</span>
-          </div>
-          <div class="about-feature-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>High-Bay Automated Pallet Racking</span>
-          </div>
-          <div class="about-feature-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>99.8% On-Time Delivery Guarantee</span>
-          </div>
+        <div style="background: var(--color-bg-subtle); border-left: 4px solid var(--color-primary); padding: 18px 22px; border-radius: 6px; margin-bottom: 24px;">
+          <p style="font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--color-secondary); margin: 0;">
+            "Physical warehouse &rarr; WMS &rarr; Data &rarr; AI &rarr; Better decisions &rarr; Better fulfillment."
+          </p>
         </div>
 
-        <div class="about-author-bar">
-          <div class="author-info">
-            <div class="author-avatar">DH</div>
-            <div class="author-details">
-              <h4>David Henderson</h4>
-              <p>CEO & Founder of Logixo</p>
-            </div>
-          </div>
-          <div style="text-align: right;">
-            <div style="font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; font-weight: 700;">Direct Inquiries</div>
-            <a href="tel:+12145550190" style="font-family: var(--font-tech); font-size: 1.125rem; font-weight: 800; color: var(--color-text-main);">+1 (214) 555-0190</a>
-          </div>
-        </div>
+        <a href="quote.html" class="btn btn-primary">Request A Quote</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= 02. CORE VALUES / 4 PILLARS ================= -->
-  <section class="section-padding bg-light">
+  <!-- ================= 4 PILLARS ================= -->
+  <section class="section-padding bg-slate">
     <div class="container">
-      <div class="section-header">
-        <div class="sub-title-tag">
-          <span class="tag-slash">//</span> OUR CORE VALUES
-        </div>
-        <h2 class="section-title">The Foundational Pillars of Logixo</h2>
-        <p class="section-subtitle">
-          Built from the ground up to solve complex enterprise logistics challenges.
-        </p>
+      <div class="section-header reveal">
+        <div class="sub-title-tag"><span class="tag-slash">//</span> OPERATING PRINCIPLES</div>
+        <h2 class="section-title">Why Businesses Choose Wareknit</h2>
+        <p class="section-subtitle">Four foundational commitments behind every pallet received, order picked, and parcel dispatched.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
-        <div class="timeline-card">
-          <div class="industry-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-          </div>
+      <div class="why-grid-4">
+        <div class="why-card reveal">
+          <div class="why-num-tag">01 &mdash; MODEL</div>
           <h4>Technology-First</h4>
-          <p>Digital WMS, RF barcode scanners, and automated carrier routing are embedded into every dock workflow.</p>
+          <p>Technology isn't an afterthought or an add-on widget. It is the operating model guiding every barcode scan, pick path, and truck dispatch.</p>
         </div>
 
-        <div class="timeline-card">
-          <div class="industry-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          </div>
-          <h4>Maximum Security</h4>
-          <p>Strict access controls, 24/7 digital CCTV surveillance, bonded storage, and 100% insured freight.</p>
+        <div class="why-card reveal">
+          <div class="why-num-tag">02 &mdash; AGILITY</div>
+          <h4>Flexible</h4>
+          <p>We configure our WMS and floor processes around your specific business rules, unique unboxing experiences, and retail routing guides.</p>
         </div>
 
-        <div class="timeline-card">
-          <div class="industry-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-          </div>
-          <h4>Total Visibility</h4>
-          <p>No black boxes. Instant GPS tracking milestones from initial dispatch through final destination handoff.</p>
+        <div class="why-card reveal">
+          <div class="why-num-tag">03 &mdash; CONTROL</div>
+          <h4>Visible</h4>
+          <p>Direct real-time access to operational telemetry, inventory levels across bins, and order processing states without black-box delays.</p>
         </div>
 
-        <div class="timeline-card">
-          <div class="industry-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <h4>Scalable Operations</h4>
-          <p>Engineered infrastructure ready to expand seamlessly alongside peak holiday demand and rapid expansion.</p>
+        <div class="why-card reveal">
+          <div class="why-num-tag">04 &mdash; SCALE</div>
+          <h4>Scalable</h4>
+          <p>High-bay Dallas warehouse infrastructure designed to effortlessly accommodate your rapid SKU growth, seasonal spikes, and channel expansion.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= 03. COMPANY HISTORY TIMELINE ================= -->
-  <section class="section-padding bg-white">
-    <div class="container">
-      <div class="section-header">
-        <div class="sub-title-tag">
-          <span class="tag-slash">//</span> OUR JOURNEY
-        </div>
-        <h2 class="section-title">25+ Years of Evolution & Growth</h2>
-        <p class="section-subtitle">
-          How Logixo grew from a regional freight forwarder into a global supply chain titan.
-        </p>
+  <!-- ================= FINAL CTA ================= -->
+  <section class="cta-banner-strip">
+    <div class="container cta-banner-box">
+      <div>
+        <h2 style="color: #FFFFFF; font-size: 2rem; font-weight: 800; margin-bottom: 8px;">Visit Our Dallas Operations Hub.</h2>
+        <p style="color: #CBD5E1; max-width: 620px;">Schedule a facility walkthrough or discuss your fulfillment requirements with our logistics engineering team.</p>
       </div>
-
-      <div class="timeline-grid">
-        <div class="timeline-card">
-          <div class="timeline-year">1998</div>
-          <h4>Founded in Dallas</h4>
-          <p>Started with 5 freight trucks and a 15,000 sq ft warehouse serving Texas industrial manufacturers.</p>
-        </div>
-
-        <div class="timeline-card">
-          <div class="timeline-year">2008</div>
-          <h4>Global Air & Sea Hubs</h4>
-          <p>Expanded international freight forwarding operations across major transatlantic and transpacific shipping corridors.</p>
-        </div>
-
-        <div class="timeline-card">
-          <div class="timeline-year">2018</div>
-          <h4>Cloud WMS & Automation</h4>
-          <p>Built proprietary automated warehouse management software with real-time barcode telemetry and API integrations.</p>
-        </div>
-
-        <div class="timeline-card">
-          <div class="timeline-year">2026</div>
-          <h4>AI-Driven Supply Chain</h4>
-          <p>Over 8,950+ shipments monthly, 450+ fleet network, and cutting-edge predictive logistics intelligence.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= 04. EXPERT LEADERSHIP TEAM ================= -->
-  <section class="section-padding bg-light">
-    <div class="container">
-      <div class="section-header">
-        <div class="sub-title-tag">
-          <span class="tag-slash">//</span> EXPERT TEAM
-        </div>
-        <h2 class="section-title">Meet Our Logistics Leadership</h2>
-        <p class="section-subtitle">
-          Experienced industry veterans dedicated to elevating your supply chain performance.
-        </p>
-      </div>
-
-      <div class="team-grid">
-        <!-- Team 1 -->
-        <div class="team-card">
-          <div class="team-img-wrap">
-            <img src="images/team_ceo.jpg" alt="David Henderson - CEO & Founder">
-          </div>
-          <div class="team-info">
-            <h4>David Henderson</h4>
-            <p>CEO & Founder</p>
-          </div>
-        </div>
-
-        <!-- Team 2 -->
-        <div class="team-card">
-          <div class="team-img-wrap">
-            <img src="images/team_coo.jpg" alt="Elena Wright - VP Operations">
-          </div>
-          <div class="team-info">
-            <h4>Elena Wright</h4>
-            <p>VP of Logistics Operations</p>
-          </div>
-        </div>
-
-        <!-- Team 3 -->
-        <div class="team-card">
-          <div class="team-img-wrap">
-            <img src="images/team_freight.jpg" alt="Marcus Vance - Director of Freight">
-          </div>
-          <div class="team-info">
-            <h4>Marcus Vance</h4>
-            <p>Director of Global Freight</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= 05. MILESTONE COUNTER STRIP ================= -->
-  <section class="counter-strip">
-    <div class="container counter-grid">
-      <div class="counter-item">
-        <div class="counter-num">8,950+</div>
-        <div class="counter-lbl">Delivered Packages</div>
-      </div>
-      <div class="counter-item">
-        <div class="counter-num">1,250+</div>
-        <div class="counter-lbl">Satisfied Clients</div>
-      </div>
-      <div class="counter-item">
-        <div class="counter-num">450+</div>
-        <div class="counter-lbl">Modern Fleets</div>
-      </div>
-      <div class="counter-item">
-        <div class="counter-num">99.8%</div>
-        <div class="counter-lbl">On-Time Guarantee</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= 06. PARTNER LOGOS STRIP ================= -->
-  <section class="partners-strip">
-    <div class="container partners-grid">
-      <div class="partner-logo-item">MAERSK</div>
-      <div class="partner-logo-item">FEDEX</div>
-      <div class="partner-logo-item">DHL EXPRESS</div>
-      <div class="partner-logo-item">HAPAG-LLOYD</div>
-      <div class="partner-logo-item">UPS FREIGHT</div>
-      <div class="partner-logo-item">CMA CGM</div>
-    </div>
-  </section>
-
-  <!-- ================= 07. TOUR FACILITY CTA ================= -->
-  <section class="section-padding bg-white" style="text-align: center;">
-    <div class="container">
-      <div class="sub-title-tag" style="justify-content: center;">
-        <span class="tag-slash">//</span> VISIT OUR HUB
-      </div>
-      <h2 class="section-title" style="margin-bottom: 16px;">Tour Our Dallas Logistics & Fulfillment Center</h2>
-      <p style="color: var(--color-text-body); max-width: 620px; margin: 0 auto 32px; font-size: 1.0625rem;">
-        Experience our high-density pallet racking, automated RF picking systems, and secure cross-docking operations in person.
-      </p>
-      <div style="display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;">
-        <a href="contact.html" class="btn btn-primary btn-lg">
-          <span>Schedule Facility Tour</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-        <a href="quote.html" class="btn btn-outline btn-lg">
-          <span>Request A Rate Quote &rarr;</span>
-        </a>
+      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+        <a href="quote.html" class="btn" style="background: #FFFFFF; color: var(--color-primary); font-weight: 800;">Request A Quote</a>
+        <a href="contact.html" class="btn btn-outline" style="border-color: #FFFFFF; color: #FFFFFF;">Book Facility Tour &rarr;</a>
       </div>
     </div>
   </section>
@@ -469,68 +210,61 @@
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <!-- Col 1: About -->
       <div class="footer-brand">
         <div class="brand-logo">
-          <img src="images/logo.png" alt="Warenite Logo" class="brand-logo-img">
+          <img src="images/logo.png" alt="Wareknit Logo" class="brand-logo-img">
           <div class="logo-text">
-            <span class="logo-title" style="color: #FFFFFF;">WARENITE<span>.</span></span>
-            <span class="logo-subtitle" style="color: var(--color-primary);">Logistics & Supply Chain</span>
+            <span class="logo-title" style="color: #FFFFFF;">WAREKNIT<span>.</span></span>
+            <span class="logo-subtitle" style="color: var(--color-primary);">Logistics & Technology</span>
           </div>
         </div>
-        <p>
-          Fast, reliable, and technology-driven global logistics and freight solutions. Connecting businesses worldwide with precision.
-        </p>
+        <p>A physical operation with a digital brain. Dallas-based warehousing, fulfillment, WMS technology and AI-driven intelligence.</p>
         <div style="font-family: var(--font-tech); font-size: 0.8125rem; color: #CBD5E1;">
-          📍 DFW Freight Center, Dallas, TX 75261, USA<br>
-          📞 +1 (214) 555-0190 | ✉️ info@warenite.com
+          📍 DFW Logistics Hub, Dallas, TX 75261, USA<br>
+          📞 +1 (214) 555-0190 | ✉️ info@wareknit.com
         </div>
       </div>
 
-      <!-- Col 2: Quick Links -->
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4>Navigation</h4>
         <ul class="footer-links-list">
-          <li><a href="about.html" class="footer-link">About Our Company</a></li>
-          <li><a href="services.html" class="footer-link">Our Services</a></li>
-          <li><a href="technology.html" class="footer-link">Technology & WMS</a></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us & Dallas Hub</a></li>
+          <li><a href="services.html" class="footer-link">3PL Services</a></li>
+          <li><a href="technology.html" class="footer-link">WMS & Technology</a></li>
+          <li><a href="ai.html" class="footer-link">AI for Logistics</a></li>
           <li><a href="industries.html" class="footer-link">Industry Solutions</a></li>
-          <li><a href="quote.html" class="footer-link">Get A Free Quote</a></li>
+          <li><a href="quote.html" class="footer-link">Request a Quote</a></li>
           <li><a href="contact.html" class="footer-link">Contact Us</a></li>
         </ul>
       </div>
 
-      <!-- Col 3: Services -->
       <div class="footer-col">
-        <h4>Core Services</h4>
+        <h4>Core 3PL Services</h4>
         <ul class="footer-links-list">
-          <li><a href="services.html#air" class="footer-link">Air Freight Shipping</a></li>
-          <li><a href="services.html#ocean" class="footer-link">Ocean Cargo Transport</a></li>
-          <li><a href="services.html#road" class="footer-link">Road / Land Freight</a></li>
           <li><a href="services.html#warehousing" class="footer-link">Warehousing & Storage</a></li>
-          <li><a href="services.html#supplychain" class="footer-link">Supply Chain Management</a></li>
-          <li><a href="services.html#brokerage" class="footer-link">Customs Clearance</a></li>
+          <li><a href="services.html#fulfillment" class="footer-link">Order Fulfillment</a></li>
+          <li><a href="services.html#inventory" class="footer-link">Inventory Management</a></li>
+          <li><a href="services.html#receiving" class="footer-link">Receiving & Putaway</a></li>
+          <li><a href="services.html#b2b" class="footer-link">B2B Wholesale Fulfillment</a></li>
+          <li><a href="services.html#b2c" class="footer-link">B2C E-Commerce Fulfillment</a></li>
+          <li><a href="services.html#kitting" class="footer-link">Kitting & Assembly</a></li>
+          <li><a href="services.html#returns" class="footer-link">Returns Management</a></li>
         </ul>
       </div>
 
-      <!-- Col 4: Newsletter -->
       <div class="footer-col">
-        <h4>Newsletter</h4>
-        <p style="font-size: 0.875rem; color: #94A3B8; margin-bottom: 12px;">
-          Subscribe to our weekly freight rates update and global supply chain insights.
-        </p>
-        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Logixo Freight Briefing!');">
+        <h4>Logistics Briefing</h4>
+        <p style="font-size: 0.875rem; color: #94A3B8; margin-bottom: 12px;">Subscribe for monthly Dallas supply chain intelligence.</p>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
           <input type="email" class="footer-input" placeholder="Your business email..." required>
           <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
         </form>
       </div>
     </div>
 
-    <!-- Bottom copyright -->
     <div class="container footer-bottom">
-      <div>
-        &copy; 2026 Logixo. All Rights Reserved. Powered by ThemeServices.
-      </div>
+      <div>&copy; 2026 Wareknit Logistics LLC. All Rights Reserved. Dallas, Texas, USA.</div>
       <div style="display: flex; gap: 20px;">
         <a href="#" class="footer-link">Privacy Policy</a>
         <a href="#" class="footer-link">Terms of Service</a>
@@ -538,27 +272,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ================= VIDEO TOUR MODAL ================= -->
-  <div class="video-modal-backdrop" id="videoModalBackdrop">
-    <div class="video-modal-content">
-      <button class="video-modal-close" id="videoModalClose" aria-label="Close Video">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #0F172A; display: flex; align-items: center; justify-content: center;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #FFFFFF; padding: 30px; text-align: center;">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" style="margin-bottom: 16px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-          <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 8px;">Logixo Dallas Hub Facility Walkthrough</h3>
-          <p style="color: #94A3B8; max-width: 500px; font-size: 0.9375rem;">Interactive virtual tour showing high-bay automated racking, RF sorting zones, and 24/7 cross-dock distribution operations.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="backToTopBtn" aria-label="Scroll to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </button>
 
   <script src="js/main.js"></script>
 </body>
