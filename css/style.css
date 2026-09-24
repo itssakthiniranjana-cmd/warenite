@@ -5104,54 +5104,219 @@ button, input, select, textarea {
   line-height: 1.6;
 }
 
-/* Future-Ready Roadmap Flow */
-.roadmap-timeline-box {
-  background: #0A2140;
-  border-radius: 16px;
-  padding: 40px 30px;
-  margin-top: 36px;
-  color: #FFFFFF;
+/* ==========================================================================
+   11. FUTURE-READY TECHNOLOGY EVOLUTION & ROADMAP (CLEAN & MODERN DESIGN)
+   ========================================================================== */
+.tech-evolution-section {
+  background: #FFFFFF;
+  position: relative;
 }
 
-.roadmap-flow-chain {
+.tech-evolution-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+  gap: 18px;
   position: relative;
+  margin-top: 36px;
+}
+
+.tech-evolution-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.tech-evolution-card:hover {
+  border-color: #CBD5E1;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.tech-evolution-card.active-phase {
+  border-color: #FED7AA;
+  background: #FFFAF5;
+}
+
+.tech-evolution-card.active-phase:hover {
+  border-color: var(--color-primary);
+}
+
+.tech-card-top-row {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
 }
 
-.roadmap-step-box {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 20px 16px;
-  text-align: center;
-  transition: all 0.2s;
-}
-
-.roadmap-step-box:hover {
-  border-color: var(--color-primary);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.roadmap-step-box.current {
-  border-color: var(--color-primary);
-  background: rgba(255, 94, 20, 0.12);
-}
-
-.roadmap-step-box h5 {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 800;
-  margin-bottom: 6px;
-  color: #FFFFFF;
-}
-
-.roadmap-step-box p {
+.tech-phase-num {
+  font-family: var(--font-tech);
   font-size: 0.75rem;
+  font-weight: 800;
   color: #94A3B8;
+  letter-spacing: 0.05em;
+}
+
+.tech-status-badge {
+  font-family: var(--font-tech);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tech-status-badge.live {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #059669;
+}
+
+.tech-status-badge.rollout {
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  color: #0284C7;
+}
+
+.tech-status-badge.roadmap {
+  background: #FFF7ED;
+  border: 1px solid #FED7AA;
+  color: #EA580C;
+}
+
+.tech-card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.tech-evolution-card.active-phase .tech-card-icon {
+  background: #FFF5EE;
+  border-color: #FED7AA;
+  color: var(--color-primary);
+}
+
+.tech-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 6px;
+}
+
+.tech-card-desc {
+  font-size: 0.8125rem;
+  color: #64748B;
+  line-height: 1.45;
+  margin: 0 0 16px 0;
+}
+
+.tech-card-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tech-card-features-list li {
+  font-size: 0.75rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.35;
+}
+
+.tech-card-features-list li::before {
+  content: '✓';
+  color: #059669;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.tech-evolution-card.active-phase .tech-card-features-list li::before {
+  color: var(--color-primary);
+}
+
+/* Bottom Architecture Assurance Strip */
+.tech-assurance-banner {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tech-assurance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.tech-assurance-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9375rem;
+  flex-shrink: 0;
+}
+
+.tech-assurance-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 2px;
+}
+
+.tech-assurance-text p {
+  font-size: 0.78125rem;
+  color: #64748B;
+  margin: 0;
   line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  .tech-evolution-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tech-assurance-banner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-evolution-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Quote Form 4-Part Layout */
