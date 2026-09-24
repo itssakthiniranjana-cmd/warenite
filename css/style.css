@@ -6,37 +6,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Logixo Brand Colors */
-  --color-primary: #FF5E14;              /* Logixo Signature Bright Orange */
-  --color-primary-hover: #E04B06;
-  --color-primary-light: #FFF1EB;
+  /* Warenite Brand Colors (Derived from Logo Emblem) */
+  --color-primary: #FF5E14;              /* Logo Signature Vibrant Orange */
+  --color-primary-hover: #E64E07;
+  --color-primary-light: #FFF2EB;
   --color-primary-soft: rgba(255, 94, 20, 0.1);
-  --color-primary-glow: rgba(255, 94, 20, 0.3);
+  --color-primary-glow: rgba(255, 94, 20, 0.35);
 
-  --color-secondary: #0F172A;            /* Deep Navy Charcoal */
-  --color-secondary-light: #1E293B;
-  --color-accent-blue: #0284C7;          /* Freight Blue */
+  --color-secondary: #0A2140;            /* Logo Deep Navy Blue */
+  --color-secondary-light: #12335E;
+  --color-navy: #082142;
+  --color-navy-dark: #05152B;
+  --color-accent-blue: #0D3A6B;          /* Logo Wing Navy */
 
   /* FreightExpress Theme Palette */
-  --fe-bg: #0E313A;                      /* FreightExpress signature dark teal */
-  --fe-bg-card: #143C46;                 /* Slightly elevated card background */
-  --fe-bg-card-hover: #1A4753;
-  --fe-border: #316877;                  /* Cyan-teal border line */
-  --fe-border-subtle: rgba(49, 104, 119, 0.35);
+  --fe-bg: #0A2140;                      /* Rich Dark Navy */
+  --fe-bg-card: #0F2D52;                 /* Elevated Navy Card */
+  --fe-bg-card-hover: #163B66;
+  --fe-border: #1E4E80;                  /* Navy-Cyan border */
+  --fe-border-subtle: rgba(30, 78, 128, 0.4);
   --fe-text-main: #FFFFFF;               /* Bright white heading text */
-  --fe-text-light: #B6CFD6;              /* Soft cyan-gray body text */
-  --fe-accent: #FF5E14;                  /* Vibrant accent orange */
-  --fe-accent-alt: #FCB900;              /* Golden amber accent */
+  --fe-text-light: #B8D3E8;              /* Soft ice-blue body text */
+  --fe-accent: #FF5E14;                  /* Vibrant logo orange */
+  --fe-accent-alt: #FF8800;              /* Bright amber accent */
 
   /* Backgrounds */
   --color-bg-body: #F8FAFC;              /* Luminous Light Canvas */
   --color-bg-white: #FFFFFF;             /* Pure White Surface */
   --color-bg-subtle: #F1F5F9;            /* Cool Slate */
   --color-bg-alt: #EDF2F7;               /* Alternating Section Background */
-  --color-bg-dark: #0A1425;              /* Footer & Contrast Dark */
+  --color-bg-dark: #071930;              /* Footer & Contrast Dark */
 
   /* Text Colors */
-  --color-text-main: #0F172A;            /* High-contrast Heading Black */
+  --color-text-main: #0A2140;            /* Logo Navy Heading Black */
   --color-text-body: #475569;            /* Crisp Body Slate */
   --color-text-muted: #64748B;           /* Secondary Muted */
   --color-text-light: #94A3B8;
@@ -433,6 +435,20 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  height: 46px;
+  width: auto;
+  max-width: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(255, 94, 20, 0.28));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.08) rotate(-2deg);
 }
 
 .logo-icon {
