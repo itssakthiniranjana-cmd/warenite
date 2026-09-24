@@ -79,91 +79,72 @@ function initMobileDrawer() {
 }
 
 /* ==========================================================================
-   03. HERO SLIDER ENGINE (Auto-rotation, Transitions & Arrows)
+   03. HERO SHOWCASE / SLIDER ENGINE (3-Panel Sliced Layout & 01/02/03 Tabs)
    ========================================================================== */
 function initHeroSlider() {
-  const slides = document.querySelectorAll('.hero-slide');
-  const dotsContainer = document.querySelector('.hero-slider-dots');
-  const prevBtn = document.querySelector('.hero-slider-arrow.prev');
-  const nextBtn = document.querySelector('.hero-slider-arrow.next');
+  const showcaseSlides = document.querySelectorAll('.hero-showcase-slide');
+  const allTabBtns = document.querySelectorAll('.hero-tab-item');
+  const showcaseContainer = document.querySelector('.hero-showcase-section');
 
-  if (!slides.length) return;
+  if (showcaseSlides.length) {
+    let currentSlide = 1; // Default to Slide 1 (Professional Packing and Delivery)
+    let autoTimer = null;
+    const duration = 6500;
 
-  let currentSlide = 0;
-  let slideInterval;
-  const intervalTime = 6000;
-
-  // Create dots if container exists
-  if (dotsContainer && !dotsContainer.children.length) {
-    slides.forEach((_, idx) => {
-      const dot = document.createElement('div');
-      dot.classList.add('hero-dot');
-      if (idx === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => {
-        goToSlide(idx);
-        resetInterval();
+    function activateSlide(index) {
+      currentSlide = index;
+      showcaseSlides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === index);
       });
-      dotsContainer.appendChild(dot);
+
+      allTabBtns.forEach(btn => {
+        const target = parseInt(btn.getAttribute('data-target-slide'), 10);
+        btn.classList.toggle('active', target === index);
+      });
+    }
+
+    allTabBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetIdx = parseInt(btn.getAttribute('data-target-slide'), 10);
+        if (!isNaN(targetIdx)) {
+          activateSlide(targetIdx);
+          restartTimer();
+        }
+      });
     });
+
+    function nextShowcase() {
+      let next = (currentSlide + 1) % showcaseSlides.length;
+      activateSlide(next);
+    }
+
+    function startTimer() {
+      autoTimer = setInterval(nextShowcase, duration);
+    }
+
+    function restartTimer() {
+      clearInterval(autoTimer);
+      startTimer();
+    }
+
+    if (showcaseContainer) {
+      showcaseContainer.addEventListener('mouseenter', () => clearInterval(autoTimer));
+      showcaseContainer.addEventListener('mouseleave', () => startTimer());
+    }
+
+    startTimer();
   }
 
-  const dots = document.querySelectorAll('.hero-dot');
-
-  function showSlide(index) {
-    slides.forEach((s, i) => {
-      s.classList.toggle('active', i === index);
-    });
-    dots.forEach((d, i) => {
-      d.classList.toggle('active', i === index);
-    });
-    currentSlide = index;
+  // Legacy fallback if hero-slide elements exist
+  const legacySlides = document.querySelectorAll('.hero-slide');
+  if (legacySlides.length && !showcaseSlides.length) {
+    let curr = 0;
+    setInterval(() => {
+      curr = (curr + 1) % legacySlides.length;
+      legacySlides.forEach((s, i) => s.classList.toggle('active', i === curr));
+    }, 6000);
   }
-
-  function nextSlide() {
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
-  }
-
-  function prevSlide() {
-    let prev = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prev);
-  }
-
-  function goToSlide(index) {
-    showSlide(index);
-  }
-
-  function startInterval() {
-    slideInterval = setInterval(nextSlide, intervalTime);
-  }
-
-  function resetInterval() {
-    clearInterval(slideInterval);
-    startInterval();
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      resetInterval();
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      prevSlide();
-      resetInterval();
-    });
-  }
-
-  // Pause on hover
-  const sliderSection = document.querySelector('.hero-slider-section');
-  if (sliderSection) {
-    sliderSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
-    sliderSection.addEventListener('mouseleave', () => startInterval());
-  }
-
-  startInterval();
 }
 
 /* ==========================================================================

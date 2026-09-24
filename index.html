@@ -184,104 +184,173 @@
     </div>
   </aside>
 
-  <!-- ================= 01. HERO SLIDER SECTION (Animated Multi-Slide) ================= -->
-  <section class="hero-slider-section">
-    <!-- Slider Navigation Arrows -->
-    <button class="hero-slider-arrow prev" aria-label="Previous Slide">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-    </button>
-    <button class="hero-slider-arrow next" aria-label="Next Slide">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-    </button>
+  <!-- ================= 01. HERO SHOWCASE SECTION (3-Panel Sliced Layout with 01/02/03 Switcher) ================= -->
+  <section class="hero-showcase-section">
+    <div class="hero-showcase-container">
+      
+      <!-- Slide Item 1: Air Freight -->
+      <div class="hero-showcase-slide" data-slide-index="0">
+        <div class="hero-panels-grid">
+          <!-- Panel 1: Main Left Content -->
+          <div class="hero-panel hero-panel-main">
+            <div class="hero-panel-bg" style="background-image: url('images/air_freight_hero.jpg');"></div>
+            <div class="hero-panel-overlay"></div>
+            
+            <div class="hero-main-content">
+              <h1 class="hero-showcase-title">
+                Global Air<br>
+                Freight and<br>
+                Express Delivery
+              </h1>
+              
+              <div class="hero-action-row">
+                <a href="services.html" class="hero-showcase-btn">
+                  <span>View More</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
 
-    <div class="hero-slider-wrapper">
-      <!-- Slide 1 -->
-      <div class="hero-slide active">
-        <img src="images/logixo_hero_1.jpg" alt="Logixo Freight Transport and Fleet" class="hero-slider-bg">
-        <div class="hero-bg-overlay"></div>
-        <div class="container" style="position: relative; z-index: 10;">
-          <div class="hero-content-box">
-            <div class="sub-title-tag">
-              <span class="tag-slash">//</span> WELCOME TO LOGIXO LOGISTICS
+            <!-- Tab Selectors (01 / 02 / 03) -->
+            <div class="hero-showcase-tabs">
+              <button class="hero-tab-item" data-target-slide="0" aria-label="Select Air Freight">
+                <span class="hero-tab-num">01</span>
+                <span class="hero-tab-label">Air<br>Freight</span>
+              </button>
+              <button class="hero-tab-item active" data-target-slide="1" aria-label="Select Ocean Freight">
+                <span class="hero-tab-num">02</span>
+                <span class="hero-tab-label">Ocean<br>Freight</span>
+              </button>
+              <button class="hero-tab-item" data-target-slide="2" aria-label="Select Land Transport">
+                <span class="hero-tab-num">03</span>
+                <span class="hero-tab-label">Land<br>Transport</span>
+              </button>
             </div>
-            <h1 class="hero-heading">
-              Fast & Reliable Logistics & Transport <span class="highlight-primary">Solutions</span>.
-            </h1>
-            <p class="hero-text">
-              We provide full-range logistics, high-bay warehousing, and worldwide air and land freight distribution services tailored to your supply chain requirements with 100% on-time reliability.
-            </p>
-            <div class="hero-buttons">
-              <a href="services.html" class="btn btn-primary btn-lg">
-                <span>Our Services</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-              <a href="about.html" class="btn btn-outline btn-lg">
-                <span>About Us &rarr;</span>
-              </a>
-            </div>
+          </div>
+
+          <!-- Panel 2: Center Sliced Strip -->
+          <div class="hero-panel hero-panel-mid">
+            <div class="hero-panel-bg" style="background-image: url('images/air_freight_hero.jpg');"></div>
+            <div class="hero-panel-overlay"></div>
+          </div>
+
+          <!-- Panel 3: Right Sliced Strip -->
+          <div class="hero-panel hero-panel-right">
+            <div class="hero-panel-bg" style="background-image: url('images/air_freight_hero.jpg');"></div>
+            <div class="hero-panel-overlay"></div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="hero-slide">
-        <img src="images/logixo_ocean.jpg" alt="Ocean Cargo Container Ship" class="hero-slider-bg">
-        <div class="hero-bg-overlay"></div>
-        <div class="container" style="position: relative; z-index: 10;">
-          <div class="hero-content-box">
-            <div class="sub-title-tag">
-              <span class="tag-slash">//</span> GLOBAL MARITIME SHIPPING
+      <!-- Slide Item 2 (Default / Active: Professional Packing and Delivery) -->
+      <div class="hero-showcase-slide active" data-slide-index="1">
+        <div class="hero-panels-grid">
+          <!-- Panel 1: Main Left Content -->
+          <div class="hero-panel hero-panel-main">
+            <div class="hero-panel-bg" style="background-image: url('images/warehouse_packing_hero.jpg');"></div>
+            <div class="hero-panel-overlay"></div>
+            
+            <div class="hero-main-content">
+              <h1 class="hero-showcase-title">
+                Professional<br>
+                Packing and<br>
+                Delivery
+              </h1>
+              
+              <div class="hero-action-row">
+                <a href="services.html" class="hero-showcase-btn">
+                  <span>View More</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <h1 class="hero-heading">
-              Worldwide Ocean Cargo & Container <span class="highlight-primary">Freight</span>.
-            </h1>
-            <p class="hero-text">
-              Full Container Load (FCL) and consolidated LCL cargo shipping across all major international sea routes with live satellite AIS tracking and automated customs filings.
-            </p>
-            <div class="hero-buttons">
-              <a href="services.html#ocean" class="btn btn-primary btn-lg">
-                <span>Explore Ocean Cargo</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-              <a href="quote.html" class="btn btn-outline btn-lg">
-                <span>Get Instant Quote &rarr;</span>
-              </a>
+
+            <!-- Tab Selectors (01 / 02 / 03) -->
+            <div class="hero-showcase-tabs">
+              <button class="hero-tab-item" data-target-slide="0" aria-label="Select Air Freight">
+                <span class="hero-tab-num">01</span>
+                <span class="hero-tab-label">Air<br>Freight</span>
+              </button>
+              <button class="hero-tab-item active" data-target-slide="1" aria-label="Select Ocean Freight">
+                <span class="hero-tab-num">02</span>
+                <span class="hero-tab-label">Ocean<br>Freight</span>
+              </button>
+              <button class="hero-tab-item" data-target-slide="2" aria-label="Select Land Transport">
+                <span class="hero-tab-num">03</span>
+                <span class="hero-tab-label">Land<br>Transport</span>
+              </button>
             </div>
+          </div>
+
+          <!-- Panel 2: Center Sliced Strip -->
+          <div class="hero-panel hero-panel-mid">
+            <div class="hero-panel-bg" style="background-image: url('images/warehouse_packing_hero.jpg');"></div>
+            <div class="hero-panel-overlay"></div>
+          </div>
+
+          <!-- Panel 3: Right Sliced Strip -->
+          <div class="hero-panel hero-panel-right">
+            <div class="hero-panel-bg" style="background-image: url('images/warehouse_packing_hero.jpg');"></div>
+            <div class="hero-panel-overlay"></div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 3 -->
-      <div class="hero-slide">
-        <img src="images/hero_warehouse.jpg" alt="Automated High-Bay Warehouse" class="hero-slider-bg">
-        <div class="hero-bg-overlay"></div>
-        <div class="container" style="position: relative; z-index: 10;">
-          <div class="hero-content-box">
-            <div class="sub-title-tag">
-              <span class="tag-slash">//</span> DALLAS 3PL FULFILLMENT
+      <!-- Slide Item 3: Land Transport -->
+      <div class="hero-showcase-slide" data-slide-index="2">
+        <div class="hero-panels-grid">
+          <!-- Panel 1: Main Left Content -->
+          <div class="hero-panel hero-panel-main">
+            <div class="hero-panel-bg" style="background-image: url('images/logixo_hero_1.jpg');"></div>
+            <div class="hero-panel-overlay"></div>
+            
+            <div class="hero-main-content">
+              <h1 class="hero-showcase-title">
+                Overland Fleet<br>
+                and Freight<br>
+                Haulage
+              </h1>
+              
+              <div class="hero-action-row">
+                <a href="services.html" class="hero-showcase-btn">
+                  <span>View More</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <h1 class="hero-heading">
-              Modern Automated High-Bay <span class="highlight-primary">Warehousing</span>.
-            </h1>
-            <p class="hero-text">
-              Strategic DFW logistics facility providing 2-day continental US delivery, digital WMS RF barcode scanning, and multi-channel e-commerce fulfillment.
-            </p>
-            <div class="hero-buttons">
-              <a href="technology.html" class="btn btn-primary btn-lg">
-                <span>Technology & WMS</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-              <a href="contact.html" class="btn btn-outline btn-lg">
-                <span>Tour Facility &rarr;</span>
-              </a>
+
+            <!-- Tab Selectors (01 / 02 / 03) -->
+            <div class="hero-showcase-tabs">
+              <button class="hero-tab-item" data-target-slide="0" aria-label="Select Air Freight">
+                <span class="hero-tab-num">01</span>
+                <span class="hero-tab-label">Air<br>Freight</span>
+              </button>
+              <button class="hero-tab-item" data-target-slide="1" aria-label="Select Ocean Freight">
+                <span class="hero-tab-num">02</span>
+                <span class="hero-tab-label">Ocean<br>Freight</span>
+              </button>
+              <button class="hero-tab-item active" data-target-slide="2" aria-label="Select Land Transport">
+                <span class="hero-tab-num">03</span>
+                <span class="hero-tab-label">Land<br>Transport</span>
+              </button>
             </div>
+          </div>
+
+          <!-- Panel 2: Center Sliced Strip -->
+          <div class="hero-panel hero-panel-mid">
+            <div class="hero-panel-bg" style="background-image: url('images/logixo_hero_1.jpg');"></div>
+            <div class="hero-panel-overlay"></div>
+          </div>
+
+          <!-- Panel 3: Right Sliced Strip -->
+          <div class="hero-panel hero-panel-right">
+            <div class="hero-panel-bg" style="background-image: url('images/logixo_hero_1.jpg');"></div>
+            <div class="hero-panel-overlay"></div>
           </div>
         </div>
       </div>
+
     </div>
-
-    <!-- Pagination Dots -->
-    <div class="hero-slider-dots"></div>
   </section>
 
   <!-- ================= 02. QUICK TRACK & BOOKING TABS (Overlapping) ================= -->
