@@ -626,12 +626,14 @@ function initFeHotspots() {
 }
 
 /* ==========================================================================
-   18. WAREKNIT AI COPILOT CONSOLE INTERACTIVITY
+   18. WAREKNIT AI COPILOT & COMMAND CANVAS INTERACTIVITY
    ========================================================================== */
 function initAiConsoleInteractivity() {
   const promptChips = document.querySelectorAll('.ai-prompt-chip[data-prompt]');
   const inputField = document.getElementById('aiConsoleInput');
+  const modeTabs = document.querySelectorAll('.ai-mode-tab-btn[data-mode]');
 
+  // Prompt Pill click handlers
   if (promptChips.length && inputField) {
     promptChips.forEach(chip => {
       chip.addEventListener('click', () => {
@@ -642,6 +644,35 @@ function initAiConsoleInteractivity() {
       });
     });
   }
+
+  // 4 Mode Tabs Click Handlers
+  if (modeTabs.length) {
+    modeTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        modeTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const mode = tab.getAttribute('data-mode');
+        switchAiCanvasMode(mode);
+      });
+    });
+  }
+}
+
+function switchAiCanvasMode(mode) {
+  const input = document.getElementById('aiConsoleInput');
+  if (!input) return;
+
+  if (mode === 'stockout') {
+    input.value = "Analyze SKU-102 depletion rate and reorder date.";
+  } else if (mode === 'routing') {
+    input.value = "Optimize Wave 4 packing station assignments.";
+  } else if (mode === 'rates') {
+    input.value = "Calculate multi-carrier rate savings for today's volume.";
+  } else {
+    input.value = "Show me today's fulfillment exceptions.";
+  }
+  handleAiQuerySubmit();
 }
 
 function handleAiQuerySubmit() {
@@ -652,15 +683,15 @@ function handleAiQuerySubmit() {
   const queryText = input.value.trim();
   if (!queryText) return;
 
-  // Append user query bubble
+  // Append user query bubble in modern styling
   const userCard = document.createElement('div');
-  userCard.className = 'ai-insight-card info';
+  userCard.className = 'ai-alert-box-modern info';
   userCard.style.animation = 'feFadeIn 0.3s ease';
   userCard.innerHTML = `
-    <div class="ai-insight-icon-box" style="color: #38BDF8; background: rgba(56, 189, 248, 0.15);">&#128172;</div>
-    <div class="ai-insight-text">
-      <strong>User Query:</strong>
-      <div>"${queryText}"</div>
+    <div class="ai-alert-icon" style="color: #38BDF8; background: rgba(56, 189, 248, 0.15);">💬</div>
+    <div class="ai-alert-body">
+      <strong>User Query &middot; Live Floor Terminal</strong>
+      <p style="color: #E2E8F0; font-family: var(--font-tech); font-size: 0.8125rem;">"${queryText}"</p>
     </div>
   `;
   stream.appendChild(userCard);
@@ -671,48 +702,55 @@ function handleAiQuerySubmit() {
   // Simulate AI streaming response
   setTimeout(() => {
     const aiResponseCard = document.createElement('div');
-    aiResponseCard.className = 'ai-insight-card success';
     aiResponseCard.style.animation = 'feFadeIn 0.4s ease';
 
     let answerHtml = '';
-    if (queryText.toLowerCase().includes('sku-102') || queryText.toLowerCase().includes('runout')) {
-      aiResponseCard.className = 'ai-insight-card danger';
+    const qLower = queryText.toLowerCase();
+
+    if (qLower.includes('sku-102') || qLower.includes('runout') || qLower.includes('stockout')) {
+      aiResponseCard.className = 'ai-alert-box-modern danger';
       answerHtml = `
-        <div class="ai-insight-icon-box" style="color: #EF4444; background: rgba(239, 68, 68, 0.15);">&#9888;</div>
-        <div class="ai-insight-text">
-          <strong>Wareknit AI Analysis &middot; SKU Depletion:</strong>
-          <div>SKU-102: 48 units available. Velocity: 16 units/day. Estimated runout: 72 hours. Supplier PO #4481 recommended for immediate placement.</div>
-          <button class="ai-insight-action-btn" onclick="alert('Action Executed: Supplier PO #4481 submitted to vendor.');">
-            <span>📦 Submit Supplier PO</span>
-          </button>
+        <div class="ai-alert-icon" style="color: #EF4444; background: rgba(239, 68, 68, 0.15);">📦</div>
+        <div class="ai-alert-body">
+          <strong>SKU-102 Inventory Runout Diagnostic</strong>
+          <p>48 units remaining in Dallas Hub. Current velocity: 16 units/day. Projected depletion in 36 hours. Suggested action: Draft supplier replenishment PO #4481.</p>
+          <div style="margin-top: 8px;">
+            <button class="ai-insight-action-btn" onclick="alert('Action Executed: Supplier PO #4481 submitted to vendor system.');">
+              <span>📋 Draft Supplier PO #4481</span>
+            </button>
+          </div>
         </div>
       `;
-    } else if (queryText.toLowerCase().includes('wave 4') || queryText.toLowerCase().includes('station')) {
-      aiResponseCard.className = 'ai-insight-card warning';
+    } else if (qLower.includes('wave 4') || qLower.includes('station') || qLower.includes('route') || qLower.includes('optimize')) {
+      aiResponseCard.className = 'ai-alert-box-modern warning';
       answerHtml = `
-        <div class="ai-insight-icon-box" style="color: #F59E0B; background: rgba(245, 158, 11, 0.15);">&#9888;</div>
-        <div class="ai-insight-text">
-          <strong>Wareknit AI Analysis &middot; Wave 4 Routing:</strong>
-          <div>Wave 4 contains 142 units across Aisle B-02 and A-03. Recommended action: Route 4 pickers to Station #2 to meet FedEx 15:45 cutoff.</div>
-          <button class="ai-insight-action-btn" onclick="alert('Action Executed: RF Pickers routed to Station #2.');">
-            <span>⚡ Apply Wave Balancing</span>
-          </button>
+        <div class="ai-alert-icon" style="color: #F59E0B; background: rgba(245, 158, 11, 0.15);">⚡</div>
+        <div class="ai-alert-body">
+          <strong>Wave #4 Packing Station Balancing</strong>
+          <p>Wave 4 contains 142 units across Aisle B-02. Recommended action: Route 4 pickers to High-Velocity Station #2 to meet FedEx 15:45 CST trailer cutoff.</p>
+          <div style="margin-top: 8px;">
+            <button class="ai-insight-action-btn" onclick="alert('Action Executed: Dynamic wave balancing applied across Station #2.');">
+              <span>⚡ Apply Wave Balancing</span>
+            </button>
+          </div>
         </div>
       `;
-    } else if (queryText.toLowerCase().includes('carrier') || queryText.toLowerCase().includes('rate')) {
+    } else if (qLower.includes('carrier') || qLower.includes('rate') || qLower.includes('shopping')) {
+      aiResponseCard.className = 'ai-alert-box-modern success';
       answerHtml = `
-        <div class="ai-insight-icon-box" style="color: #10B981; background: rgba(16, 185, 129, 0.15);">&#10003;</div>
-        <div class="ai-insight-text">
-          <strong>Wareknit AI Analysis &middot; Rate Optimization:</strong>
-          <div>Rate shopping evaluated 1,284 parcels across FedEx, UPS, and USPS. Automated zone skipping saved $842.10 today (14.2% reduction).</div>
+        <div class="ai-alert-icon" style="color: #10B981; background: rgba(16, 185, 129, 0.15);">🚚</div>
+        <div class="ai-alert-body">
+          <strong>Multi-Carrier Rate & SLA Optimization</strong>
+          <p>Analyzed 1,284 shipments across FedEx, UPS, and Regional Ground. Dynamic zone skipping saved $842.10 today (14.2% rate reduction) with 100% on-time delivery confidence.</p>
         </div>
       `;
     } else {
+      aiResponseCard.className = 'ai-alert-box-modern info';
       answerHtml = `
-        <div class="ai-insight-icon-box" style="color: #10B981; background: rgba(16, 185, 129, 0.15);">&#10003;</div>
-        <div class="ai-insight-text">
-          <strong>Wareknit AI Analysis &middot; Operational Health:</strong>
-          <div>1,284 orders in progress. 12 exceptions triaged. Dallas Hub operating at 99.8% SLA precision with 14 min average carrier buffer.</div>
+        <div class="ai-alert-icon" style="color: #38BDF8; background: rgba(56, 189, 248, 0.15);">✓</div>
+        <div class="ai-alert-body">
+          <strong>Warehouse Operational Health & SLA Status</strong>
+          <p>1,284 orders processed. 12 operational exceptions surfaced and triaged. Dallas Hub operating at 99.8% precision with an average 14-minute buffer ahead of carrier pickup windows.</p>
         </div>
       `;
     }
@@ -720,7 +758,7 @@ function handleAiQuerySubmit() {
     aiResponseCard.innerHTML = answerHtml;
     stream.appendChild(aiResponseCard);
     stream.scrollTop = stream.scrollHeight;
-  }, 400);
+  }, 350);
 }
 
 
