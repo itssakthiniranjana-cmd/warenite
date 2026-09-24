@@ -683,15 +683,15 @@ function handleAiQuerySubmit() {
   const queryText = input.value.trim();
   if (!queryText) return;
 
-  // Append user query bubble in modern styling
+  // Append user query bubble in clean minimalist styling
   const userCard = document.createElement('div');
-  userCard.className = 'ai-alert-box-modern info';
+  userCard.className = 'ai-clean-alert-item info';
   userCard.style.animation = 'feFadeIn 0.3s ease';
   userCard.innerHTML = `
-    <div class="ai-alert-icon" style="color: #38BDF8; background: rgba(56, 189, 248, 0.15);">💬</div>
-    <div class="ai-alert-body">
+    <div class="ai-clean-alert-icon" style="color: #0284C7;">💬</div>
+    <div class="ai-clean-alert-content">
       <strong>User Query &middot; Live Floor Terminal</strong>
-      <p style="color: #E2E8F0; font-family: var(--font-tech); font-size: 0.8125rem;">"${queryText}"</p>
+      <p style="color: #334155; font-size: 0.8125rem; font-weight: 500;">"${queryText}"</p>
     </div>
   `;
   stream.appendChild(userCard);
@@ -708,47 +708,43 @@ function handleAiQuerySubmit() {
     const qLower = queryText.toLowerCase();
 
     if (qLower.includes('sku-102') || qLower.includes('runout') || qLower.includes('stockout')) {
-      aiResponseCard.className = 'ai-alert-box-modern danger';
+      aiResponseCard.className = 'ai-clean-alert-item danger';
       answerHtml = `
-        <div class="ai-alert-icon" style="color: #EF4444; background: rgba(239, 68, 68, 0.15);">📦</div>
-        <div class="ai-alert-body">
+        <div class="ai-clean-alert-icon" style="color: #DC2626;">📦</div>
+        <div class="ai-clean-alert-content">
           <strong>SKU-102 Inventory Runout Diagnostic</strong>
           <p>48 units remaining in Dallas Hub. Current velocity: 16 units/day. Projected depletion in 36 hours. Suggested action: Draft supplier replenishment PO #4481.</p>
-          <div style="margin-top: 8px;">
-            <button class="ai-insight-action-btn" onclick="alert('Action Executed: Supplier PO #4481 submitted to vendor system.');">
-              <span>📋 Draft Supplier PO #4481</span>
-            </button>
-          </div>
+          <button class="ai-clean-action-btn" onclick="alert('Action Executed: Supplier PO #4481 submitted to vendor system.');">
+            <span>📋 Draft Supplier PO #4481</span>
+          </button>
         </div>
       `;
     } else if (qLower.includes('wave 4') || qLower.includes('station') || qLower.includes('route') || qLower.includes('optimize')) {
-      aiResponseCard.className = 'ai-alert-box-modern warning';
+      aiResponseCard.className = 'ai-clean-alert-item warning';
       answerHtml = `
-        <div class="ai-alert-icon" style="color: #F59E0B; background: rgba(245, 158, 11, 0.15);">⚡</div>
-        <div class="ai-alert-body">
+        <div class="ai-clean-alert-icon" style="color: #D97706;">⚡</div>
+        <div class="ai-clean-alert-content">
           <strong>Wave #4 Packing Station Balancing</strong>
           <p>Wave 4 contains 142 units across Aisle B-02. Recommended action: Route 4 pickers to High-Velocity Station #2 to meet FedEx 15:45 CST trailer cutoff.</p>
-          <div style="margin-top: 8px;">
-            <button class="ai-insight-action-btn" onclick="alert('Action Executed: Dynamic wave balancing applied across Station #2.');">
-              <span>⚡ Apply Wave Balancing</span>
-            </button>
-          </div>
+          <button class="ai-clean-action-btn" onclick="alert('Action Executed: Dynamic wave balancing applied across Station #2.');">
+            <span>⚡ Apply Wave Balancing</span>
+          </button>
         </div>
       `;
     } else if (qLower.includes('carrier') || qLower.includes('rate') || qLower.includes('shopping')) {
-      aiResponseCard.className = 'ai-alert-box-modern success';
+      aiResponseCard.className = 'ai-clean-alert-item success';
       answerHtml = `
-        <div class="ai-alert-icon" style="color: #10B981; background: rgba(16, 185, 129, 0.15);">🚚</div>
-        <div class="ai-alert-body">
+        <div class="ai-clean-alert-icon" style="color: #059669;">🚚</div>
+        <div class="ai-clean-alert-content">
           <strong>Multi-Carrier Rate & SLA Optimization</strong>
           <p>Analyzed 1,284 shipments across FedEx, UPS, and Regional Ground. Dynamic zone skipping saved $842.10 today (14.2% rate reduction) with 100% on-time delivery confidence.</p>
         </div>
       `;
     } else {
-      aiResponseCard.className = 'ai-alert-box-modern info';
+      aiResponseCard.className = 'ai-clean-alert-item info';
       answerHtml = `
-        <div class="ai-alert-icon" style="color: #38BDF8; background: rgba(56, 189, 248, 0.15);">✓</div>
-        <div class="ai-alert-body">
+        <div class="ai-clean-alert-icon" style="color: #0284C7;">✓</div>
+        <div class="ai-clean-alert-content">
           <strong>Warehouse Operational Health & SLA Status</strong>
           <p>1,284 orders processed. 12 operational exceptions surfaced and triaged. Dallas Hub operating at 99.8% precision with an average 14-minute buffer ahead of carrier pickup windows.</p>
         </div>
