@@ -6,6 +6,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initMobileDrawer();
+  initSideAreaDrawer();
+  initSearchModal();
   initHeroSlider();
   initBookingTabs();
   initAnimatedCounters();
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillBars();
   initProjectFilter();
   initPricingToggle();
+  initFeTabs();
+  initFeHotspots();
 });
 
 /* ==========================================================================
@@ -59,6 +63,19 @@ function initMobileDrawer() {
   if (toggleBtn) toggleBtn.addEventListener('click', open);
   if (closeBtn) closeBtn.addEventListener('click', close);
   if (backdrop) backdrop.addEventListener('click', close);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      close();
+    }
+  });
+
+  const drawerLinks = drawer.querySelectorAll('a');
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      close();
+    });
+  });
 }
 
 /* ==========================================================================
@@ -471,3 +488,158 @@ function initPricingToggle() {
     });
   });
 }
+
+/* ==========================================================================
+   14. FREIGHTEXPRESS SIDE-AREA DRAWER
+   ========================================================================== */
+function initSideAreaDrawer() {
+  const toggleBtns = document.querySelectorAll('.side-toggle-btn, #sideAreaToggle');
+  const closeBtn = document.getElementById('sideAreaClose');
+  const drawer = document.getElementById('sideAreaDrawer');
+  const backdrop = document.getElementById('sideAreaBackdrop');
+
+  if (!drawer) return;
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    if (backdrop) backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  toggleBtns.forEach(btn => btn.addEventListener('click', openDrawer));
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeDrawer();
+    }
+  });
+}
+
+/* ==========================================================================
+   15. SEARCH MODAL OVERLAY
+   ========================================================================== */
+function initSearchModal() {
+  const searchTriggers = document.querySelectorAll('#headerSearchBtn, .header-search-btn');
+  const searchModal = document.getElementById('searchModalOverlay');
+  const searchClose = document.getElementById('searchModalClose');
+  const searchInput = document.getElementById('headerSearchInput');
+  const searchForm = document.getElementById('headerSearchForm');
+
+  if (!searchModal) return;
+
+  function openSearch() {
+    searchModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (searchInput) {
+      setTimeout(() => searchInput.focus(), 150);
+    }
+  }
+
+  function closeSearch() {
+    searchModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  searchTriggers.forEach(btn => btn.addEventListener('click', openSearch));
+  if (searchClose) searchClose.addEventListener('click', closeSearch);
+
+  searchModal.addEventListener('click', (e) => {
+    if (e.target === searchModal) {
+      closeSearch();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && searchModal.classList.contains('open')) {
+      closeSearch();
+    }
+  });
+
+  if (searchForm) {
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      if (q.includes('air') || q.includes('flight') || q.includes('plane')) {
+        window.location.href = 'air-freight.html';
+      } else if (q.includes('service') || q.includes('ocean') || q.includes('warehous')) {
+        window.location.href = 'services.html';
+      } else if (q.includes('tech') || q.includes('track') || q.includes('ai')) {
+        window.location.href = 'technology.html';
+      } else if (q.includes('about') || q.includes('team')) {
+        window.location.href = 'about.html';
+      } else if (q.includes('contact') || q.includes('quote')) {
+        window.location.href = 'quote.html';
+      } else {
+        window.location.href = 'services.html';
+      }
+    });
+  }
+
+  const pills = document.querySelectorAll('.search-suggestion-pill');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      if (searchInput) {
+        searchInput.value = pill.innerText;
+        if (searchForm) searchForm.dispatchEvent(new Event('submit'));
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   16. FREIGHTEXPRESS 3-TAB SWITCHER
+   ========================================================================== */
+function initFeTabs() {
+  const tabBtns = document.querySelectorAll('.fe-tab-btn');
+  const tabPanes = document.querySelectorAll('.fe-tab-pane');
+
+  if (!tabBtns.length) return;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-tab');
+
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanes.forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetPane = document.getElementById(targetId);
+      if (targetPane) {
+        targetPane.classList.add('active');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   17. FREIGHTEXPRESS WORLD MAP HOTSPOTS
+   ========================================================================== */
+function initFeHotspots() {
+  const pins = document.querySelectorAll('.fe-hotspot-pin');
+
+  if (!pins.length) return;
+
+  pins.forEach(pin => {
+    pin.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = pin.classList.contains('active');
+      pins.forEach(p => p.classList.remove('active'));
+      if (!isActive) {
+        pin.classList.add('active');
+      }
+    });
+  });
+
+  document.addEventListener('click', () => {
+    pins.forEach(p => p.classList.remove('active'));
+  });
+}
+
