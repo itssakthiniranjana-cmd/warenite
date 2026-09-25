@@ -439,9 +439,9 @@ button, input, select, textarea {
 }
 
 .brand-logo-img {
-  height: 42px;
+  height: 48px;
   width: auto;
-  max-width: 240px;
+  max-width: 260px;
   object-fit: contain;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   display: block;
@@ -452,9 +452,9 @@ button, input, select, textarea {
 }
 
 .brand-logo-footer-img {
-  height: 40px;
+  height: 44px;
   width: auto;
-  max-width: 240px;
+  max-width: 260px;
   object-fit: contain;
   display: block;
   margin-bottom: 14px;
@@ -1923,8 +1923,8 @@ button, input, select, textarea {
 }
 
 @media (max-width: 576px) {
-  .brand-logo-img { height: 34px; max-width: 190px; }
-  .brand-logo-footer-img { height: 34px; max-width: 190px; }
+  .brand-logo-img { height: 38px; max-width: 220px; }
+  .brand-logo-footer-img { height: 38px; max-width: 220px; }
   .brand-logo .logo-subtitle { display: none; }
   .brand-logo .logo-title { font-size: 1.25rem; }
   .logo-icon { width: 36px; height: 36px; }
